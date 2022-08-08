@@ -1,0 +1,79 @@
+\documentclass[pagesize=auto, fontsize=12pt, DIV=10, parskip=half]{scrartcl}
+
+\usepackage{fixltx2e}
+\usepackage{etex}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[svgnames]{xcolor}
+\usepackage{listings}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\newcommand*{\mail}[1]{\href{mailto:#1}{\texttt{#1}}}
+\newcommand*{\pkg}[1]{\textsf{#1}}
+\newcommand*{\cls}[1]{\textsf{#1}}
+\newcommand*{\cs}[1]{\texttt{\textbackslash#1}}
+\makeatletter
+\newcommand*{\cmd}[1]{\cs{\expandafter\@gobble\string#1}}
+\makeatother
+\newcommand*{\meta}[1]{\textlangle\textsl{#1}\textrangle}
+\newcommand*{\marg}[1]{\texttt{\{}\meta{#1}\texttt{\}}}
+
+\addtokomafont{title}{\rmfamily}
+
+\lstset{%
+  language=[LaTeX]TeX,%
+  columns=flexible,%
+  upquote=true,%
+  numbers=left,%
+  basicstyle=\ttfamily,%
+  keywordstyle=\color{Navy},%
+  commentstyle=\color{DimGray},%
+  stringstyle=\color{SeaGreen},%
+  numberstyle=\scriptsize\color{SlateGray},%
+  escapechar=\$%
+}
+
+\title{The \pkg{secdot} package\thanks{This manual corresponds to \pkg{secdot.sty}~v2.0, dated~July 2000.}}
+\subtitle{Define section numbers with dots}
+\author{%
+  Robin Fairbairns\thanks{\mail{rf10@cl.cam.ac.uk}}%
+  \and Steve Grathwohl\thanks{Duke University}%
+}
+\date{July 2000}
+
+
+\begin{document}
+
+\maketitle
+
+the package as loaded causes section numbers to be output with a dot
+after them.
+
+the command \cmd{\sectiondot}\marg{level} will make `\meta{level}' sections also be
+output with a dot after them -- an example of use would be:
+%
+\begin{lstlisting}
+\sectiondot{subsection}
+\end{lstlisting}
+
+the command \cmd{\sectionpunct}\marg{level}\marg{punctuation} gives finer
+control.  examples of use would be
+%
+\begin{lstlisting}
+\sectionpunct{section}{. } % \sectiondot places a \quad after the
+                              % dot, which may look excessive
+\sectionpunct{section}{\quad} % restores default latex behaviour
+\end{lstlisting}
+
+other eccentricities of numbering could be coded by those with
+stronger stomachs, by defining the appropriate
+%
+\begin{lstlisting}
+\csname @seccntfmt@$\meta{level}$\endcsname
+\end{lstlisting}
+%
+which macro will take one argument, when invoked: the `\meta{level}' name
+
+\end{document}

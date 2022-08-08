@@ -1,0 +1,35 @@
+\begin{thebibliography}{1}
+\providecommand{\url}[1]{#1}
+\csname url@rmstyle\endcsname
+\providecommand{\newblock}{\relax}
+\providecommand{\bibinfo}[2]{#2}
+\providecommand\BIBentrySTDinterwordspacing{\spaceskip=0pt\relax}
+\providecommand\BIBentryALTinterwordstretchfactor{4}
+\providecommand\BIBentryALTinterwordspacing{\spaceskip=\fontdimen2\font plus
+\BIBentryALTinterwordstretchfactor\fontdimen3\font minus
+  \fontdimen4\font\relax}
+\providecommand\BIBforeignlanguage[2]{{%
+\expandafter\ifx\csname l@#1\endcsname\relax
+\typeout{** WARNING: IEEEtran.bst: No hyphenation pattern has been}%
+\typeout{** loaded for the language `#1'. Using the pattern for}%
+\typeout{** the default language instead.}%
+\else
+\language=\csname l@#1\endcsname
+\fi
+#2}}
+
+\bibitem{ddca-riscv}
+S.~Harris and D.~Harris, \emph{Digital Design and Computer Architecture: RISC-V
+  Edition}, 1st~ed.\hskip 1em plus 0.5em minus 0.4em\relax San Francisco, CA,
+  USA: Morgan Kaufmann Publishers Inc., 2021.
+
+\bibitem{dsdb1}
+``{User Manual: NI Digital System Development Board},'' National Instruments,
+  Tech. Rep. Pub ID: 376627B-01, 2018.
+
+\bibitem{7086413}
+S.~M. Trimberger, ``Three ages of {FPGAs}: A retrospective on the first thirty
+  years of fpga technology,'' \emph{Proceedings of the IEEE}, vol. 103, no.~3,
+  pp. 318--331, 2015.
+
+\end{thebibliography}
