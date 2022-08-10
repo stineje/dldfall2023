@@ -472,7 +472,7 @@ Inside your lab report, you
 should indicate why FPGAs are important and how they can be utilized
 to implement digital gates efficiently.
 
-\subsubsection{Power, Performance and Area}
+\subsubsection{Power, Performance and Area (PPA)}
 
 Digital systems typically employ outputs that indicate statistics of
 how much space and time is consumed on a device.  These are typically
@@ -483,20 +483,35 @@ for your final design.
 During synthesis Vivado takes many of your HDL constructs and
 translates them to their implementation.  As a designer, it is
 important to keep your design as similar as possible to what the
-digital logic represents.  However, there is a good chance that many
-of these items will not look similar.  This is because Xilinx Vivado
+digital logic represents.  However, there is a good chance that your
+HDL usage may not look similar to the implemented design.  This is
+because Xilinx Vivado
 as well as many other synthesis programs utilize High-Level Synthesis
 (HLS).  Right now, only commercial tools truly support HLS, but there
 more synthesis programs in the future will support HLS.  Fortunately,
 Xilinx Vivado truly supports HLS.
 
-You should report in your final report your final PPA for your
-design.  For this lab and the remainder of your laboratories, you will
-only report Performance and Area.  Power is more difficult to assess
-and for now we will defer this to later courses.  Once your design is
-implemented, you can click on the Reports Tab.
-
-
+For future laboratories, we will explore the PPA of your design, but
+for this lab you should only report your final area for your final design.
+The area for the Xilinx FPGA is reported in 
+``slices'' utilized.  You can find this information by ``Open
+Implemented Design'' on the left side of the screen and then clicking
+the ``Report Utilization'' tab, as seen in
+Figure~\ref{utilization.fig}.    
+This should produce output that
+gives the total number of ``slices'' used for your design.
+Interestingly, you can also look at the Schematic it produces by
+clicks the Schematic option on the ``Open Implemented Design'' tab.
+For these laboratories, you should just report the total ``Slices''
+for your LUTs which you can find in the Summary part of the
+Utilization Report.  LUTs are the look-up tables discussed
+in~\cite{7086413}.
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.2]{Utilization.png}
+  \caption{Implementation Window on Xilinx's Vivado}
+  \label{utilization.fig}
+\end{figure}
 
 
 
