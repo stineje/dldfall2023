@@ -1,0 +1,670 @@
+\include{definitions}
+\usepackage{epsfig}
+
+
+\begin{document}
+
+% --- start of the abstract --------------------------------------------
+
+%   Title of the contribution
+
+\title{Variations on Truncated Multiplicatiocn}
+\author{\large James E. Stine \\
+VLSI Computer Architecture, Arithmetic and CAD Research Laboratory \\
+Department of Electrical and Computer Engineering \\
+Illinois Institute of Technology \\
+3301 South Dearborn Street \\
+Chicago, IL 60616 USA\\
+jstine@ece.iit.edu}
+
+
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+
+Truncated multiplication can be used to significantly reduce the power
+dissipation for applications that do not require correctly-rounded
+results.  This paper presents
+an efficient method for truncated multiplication called hybrid-correction
+truncation that utilizes the advantages of two previous methods
+to obtain lower average and maximum absolute error.
+Comparisons are presented comparing power, area, and delay for all
+three methods compared to standard parallel multipliers.  Estimates
+indicates that hybrid truncated multipliers dissipate slightly 
+less power and
+consume slightly less area than previous methods for truncated multiplication.
+In addition, utilization of the hybrid truncation method can provide a
+method for altering the implementation within certain limits to meet a
+given precision.
+\end{abstract}
+
+\pagestyle{empty}
+\section{Introduction}
+
+Over the last decade, the availability of 
+Digital Signal Processing (DSP) processors
+has risen dramatically.
+Consequently, DSP architectures
+have become the key component(s) in many
+consumer, communication, medical, video, and industrial
+products~\cite{ahmed}.  In fact, DSP processors have become the
+main contribution for the integration of audio, video, and
+communication
+devices~\cite{gagnaire}.  
+Often, DSP and CPU processors are found in the same 
+design.  Future generations of DSP processors will be enhanced
+with RISC-like control features while general-purpose 
+processors will be enhanced with DSP features~\cite{eyre2}.
+
+%Traditional fields in telecommunication and data communications are 
+%becoming closer related, while mobile phones have become
+%consumer products rather than devices for professional usage~\cite{koljonen}.
+%These applications, along with their diverse environments, 
+%necessitate
+%programmable platforms for their timely and efficient 
+%implementation.  
+%%Moreover, future third-generation (3G) communication
+%%systems
+%%may provide data rates more than $100$ times their previous 
+%%rates 
+%%capable of real-time processing~\cite{glossner}.
+%Although advances in parallel processing, Very Large Scale Integration (VLSI)
+%technology, and 
+%computer architecture have led to very high performance 
+%DSP architectures, architects who want to improve
+%performance beyond the gains afforded by faster clock speeds and
+%modest hardware improvements must find a way to get significantly
+%more useful work out of every clock cycle due to higher
+%communication rates~\cite{eyre2}.  
+
+The demand for increased speed, decreased
+energy consumption, improved memory utilization, and better compilers
+for DSP processors has become paramount to the design of the next
+generation of DSP processors~\cite{saghir}. 
+Since they require less accuracy and more processing power, 
+most DSP processors employ designs with 
+functional units that are distinctly different
+than those in general-purpose processors.  Typical DSP processors can
+be enhanced by employing arithmetic that takes advantage of
+application-specific characteristics to achieve lower 
+power dissipation, lower latencies, and higher throughput.  
+
+In recent years, Field Programmable Gate Arrays (FPGAs) have grown to amazing
+levels of complexity and integration.  As design sizes grow, especially for
+demanding applications in communications and computing, power consumption
+becomes a paramount issue.  In addition, the demand for battery-powered
+handheld devices that are increasingly smaller and sensitive to power usage has
+risen.  Consequently, power consumption can no longer be ignored for
+programmable logic design.  
+
+Since FPGAs are ideally suited for implementing
+highly parallel arithmetic architectures, a FGPA is ideally suited for
+high-performance DSP tasks.  
+Therefore, FPGAs are key components in implementing 
+many DSP systems.  
+Unfortunately, 
+with the increased integration of million-gate FPGAs, power consumption
+is an issue for high-performance applications.  
+
+In many of these
+systems, the products of parallel multipliers are rounded to avoid 
+growth in word size. The hardware requirements and power dissipation
+of rounded parallel multipliers can be significantly reduced by 
+a technique known as truncated 
+multiplication~\cite{lim}. 
+With this technique, the 
+least significant columns of the multiplication product bits are not used.
+Instead, the carries generated by these columns are estimated, and an
+estimate is added along with the most significant columns to produce the
+rounded product. 
+
+This paper examines further reductions in power dissipation that can be achieved
+through the use of truncated multiplication.
+Furthermore, this paper discusses implementation effects for truncated
+multipliers in FPGA architectures targeted at DSP applications.
+Section~$2$ gives an overview
+of truncated multipliers, and Section~$3$ introduces the idea of hybrid
+truncation.   Section~$4$ discusses the implementation. 
+Finally, Section~$5$ gives conclusions. 
+\footnote{Additional literature on truncated multipliers including 
+software tools for their implementation 
+are available from the Internet URL:
+http://www.ece.iit.edu/\~\,cad/HCT.html}
+
+
+\section{Truncated multipliers}
+
+High-speed parallel multipliers are the fundamental building blocks in
+digital signal processing systems~\cite{ma}. 
+In many cases, 
+parallel multipliers contribute 
+significantly to the overall power dissipation of 
+these systems~\cite{parhi}.
+Consequently, reducing the power 
+dissipation of parallel multipliers is important
+in the design of digital signal processing systems. 
+
+Parallel multipliers are typically implemented as either carry-save
+array 
+multipliers or 
+tree multipliers~~\cite{bickerstaff2}. 
+For both
+types of parallel multipliers, Booth-encoding can be employed 
+to reduce the number of 
+partial products~\cite{booth}. 
+In the discussion to follow, it is assumed that an unsigned $n$-bit 
+multiplicand $A$ is multiplied by an unsigned $m$-bit multiplier $B$
+to produce an unsigned $n+m$-bit product $P$. For fractional numbers, 
+the values for $A$, $B$, and $P$ are
+\begin{eqnarray}
+A = \sum_{i=0}^{n-1} a_{i} \cdot 2^{-n+i} ~~
+B = \sum_{i=0}^{m-1} b_{i} \cdot 2^{-m+i} \nonumber \\
+P  = \sum_{i=0}^{n+m-1} p_{i} \cdot 2^{-n-m+i} 
+\end{eqnarray}
+
+In many computer systems, the $n+m$-bit products produced by the
+parallel multipliers are rounded to $r$ bits to avoid growth in 
+word size. As presented 
+in~\cite{lim},~\cite{schulte},~\cite{king}
+truncated multiplication provides an efficient 
+method for reducing the hardware requirements of rounded parallel multipliers. 
+With truncated multiplication, only the $r+k$ most significant columns
+of the multiplication matrix are used to compute the product. The
+error produced by omitting the $m+n-r-k$ least significant columns 
+and rounding the final result to $r$ bits is estimated, and this 
+estimate is added along with the $r+k$ most significant columns to 
+produce the rounded product. Although this leads to additional error 
+in the rounded product, various techniques have been developed to help 
+limit this error. 
+
+One method to compensate for truncation are
+Constant Correction Truncated (CCT) Multipliers.  In this method,
+a constant is added to columns $n+m-r-1$ to $n+m-r-k$ of 
+the multiplication matrix~\cite{schulte}.  
+The constant helps compensate for the 
+error introduced by omitting the $n+m-r-k$ least significant columns 
+(called reduction error), and the error due to rounding the 
+product to $r$ bits (called rounding error). 
+The expected value of the sum of these error $E_{total}$ is computed 
+by assuming that each bit in $A$, $B$ and $P$ has an equal probability
+of being one or zero.  Consequently, the expected value of the total
+error is the sum of expected reduction error and the expected
+rounding error as
+% Simplified rounding error is 2^{-r-1}(1 - 2^{-k})
+\begin{eqnarray}
+E_{total} & = & E_{reduction} + E_{rounding} \nonumber \\
+E_{total} & = & \frac{1}{4} \sum_{q=0}^{S-1} (q + 1) \cdot 2^{-m-n +
+q} + \nonumber \\
+& & \frac{1}{2} \cdot \sum_{z=S-k}^{S-1} 2^{-m-n+z}
+\end{eqnarray}
+where $S = m + n - r$.
+The constant $C_{total}$ is obtained by rounding $-E_{total}$ to
+$r+k$ fractional bits, such that
+\begin{equation}
+C_{total} = -\frac{round(2^{r+k} E_{total})}{2^{r+k}}
+\end{equation}
+where $round(x)$ indicates that $x$ is rounded to the nearest
+integer. 
+
+To compute the maximum absolute error, it has been shown that 
+the maximum absolute error occurs either when all of the partial
+product bits in columns $0$ to $n+m-r-k-1$ and all the product
+bits in columns $n+m-r-k$ to $n+m-r-k$ are ones or when they are all
+zeroes~\cite{schulte}.  
+If they are all ones or all zeros, the maximum absolute error is
+just the constant $C_{total}$.  
+Therefore, the maximum absolute error
+is
+\begin{eqnarray}
+E_{max} & = & max( C_{total},  
+\sum_{q=0}^{-S-k-1} (q + 1) \cdot 2^{- m - n +  q} \nonumber \\
+& + & 2^{-r} \cdot (1 - 2^{k}))
+\end{eqnarray}
+Although the value of $k$ can be chosen to limit the
+maximum absolute error to a specific precision, this paper
+assumes the maximum absolute error is limited to 
+one unit in the last place (i.e., $2^{-r}$). 
+
+Figure~$1$ shows the block diagram of an $n=8$ by $m=8$ array 
+CCT multiplier with $r=9$ and $k=2$. 
+The rounding correction constant for the CCT array multiplier is
+$C_{round} = 0.75 \times 2^{-9}$.
+In this diagram, a modified half adder cell (MHA) consists of 
+an AND gate and a half adder. The AND gate generates a partial 
+product bit, and the half adder adds the generated partial 
+product bit and a partial product bit from the previous row
+to produce a sum bit and a carry bit. Similarly, a modified
+full adder (MFA) consists of an AND gate, which generates a partial
+product bit, and a full adder which adds the partial product
+bit and the sum and carry bits from the previous row. 
+
+The bottom 
+row of adders produces the most significant half of the product. 
+To improve performance, this row of adders is sometimes replaced by a 
+fast $n$-bit carry-propagate adder (CPA). 
+A specialized half adder (SHA) is employed within Figure~$1$ to enable the
+correction constant to be added into the partial product matrix.
+A SHA is equivalent to a MFA that has an input set to one.  
+%An $n$ by $m$ array multiplier 
+%requires $n \cdot m$ AND gates, $n-1$ half adders, 
+%and $(n-1)*(m-1) - n - m$ full 
+%%adders. 
+\begin{figure}
+\begin{center}
+\setlength{\unitlength}{0.0105in}%
+\epsfig{figure=tarray9-2.eps,height=2.5in}
+\end{center}
+\caption{Block diagram of array CCT multiplier with $n=m=8$, $r=9$, and
+$k=2$.}
+\end{figure}
+
+Another method to compensate for the truncation is using
+the Variable Correction Truncated (VCT) Multiplier~\cite{king}. 
+Figure~$2$ shows the block diagram of 
+an $8$ by $8$ array multiplier
+that uses the VCT Multiplication 
+method with $r=9$ and $k=2$. . 
+With this type of multiplier, the values of the partial 
+product bits in column $m+n-r-k-1$ are used to estimate the error due to
+leaving off the $m+n-r-k$ least significant columns. This is 
+accomplished by adding the partial products bits in column $m+n-r-k-1$ to
+column $m+n-r-k$. To compensate for the rounding error, a constant 
+is added to columns $m+n-r-2$ to $m+n-r-k$ of the multiplication matrix. 
+The value for this constant is 
+\begin{equation}
+C_{total} = 2^{-S-1}(1 - 2^{-k+1})
+\end{equation}
+which corresponds to the expected value of the rounding error
+truncated to $r+k$ bits. 
+\begin{figure}
+\begin{center}
+\setlength{\unitlength}{0.0105in}%
+\epsfig{figure=tarray9-2v.eps,height=2.5in}
+\end{center}
+\caption{Block Diagram of array VCT multiplier with $n=m=8$, $r=9$, and
+$k=2$.}
+\end{figure}
+
+When truncation occurs, the
+diagonals that produce the $t=m+n-r-k$ least significant product bits are
+eliminated. 
+To compensate for this, the AND gates that generate the partial products 
+for column $t-1$ are used as inputs to the modified adders in column $t$. 
+Since the $k$ remaining modified full adders on the right-hand-side of
+the array do not need to produce product bits, they 
+are replaced by modified reduced half and 
+full adders (RFAs), which produce a carry, 
+but do not produce.  Similarly, the use of RHA and RFAs are also employed
+in CCT multipliers.
+
+Tree multipliers
+%, the bits of the multiplicand and multiplier
+%are ANDed to generate an $n$ word by $n$ bit partial product 
+%matrix. After this, 
+utilize half adders and full adders to reduce the 
+partial product matrix to two rows that are summed using a 
+carry-propagate adder. 
+Figure~$3$ shows the dot diagram of an 
+$n=8$ by $m=8$ 
+Dadda multiplier with $r=9$ and $k=2$
+that uses the Constant Correction Truncated Multiplication
+method~\cite{schulte},~\cite{dadda}. 
+Although tree multipliers that employ Dadda's reduction scheme can be
+implemented either using the CCT or VCT method, the former
+is more efficient since
+the values of the partial 
+product bits in column $m+n-r-k-1$ can cause the initial reduction to be
+large.
+In this figure, each partial product is 
+represented by a dot, the outputs of each full adder are represented 
+by two dots connected by a plain diagonal line, and the outputs of a half
+adder are represented by two dots connected by crossed diagonal
+line. 
+The correction constant 
+is added by changing the circled half adders to a specialized half adder.
+%Further information regarding various array and tree
+%multipliers can be found in~\cite{bickerstaff}.
+The maximum absolute error of a VCT multiplier can be calculated using Equation~$2$
+and utilizing the variable correction constant in Equation~$5$ 
+\begin{eqnarray}
+E_{max} & = & \mid 2^{-1}  +  2^{-r-k-1}~\nonumber \\
+& + & \sum_{q=1}^{\lfloor \frac{S-k}{2} \rfloor}
+(S-k+2-2 \cdot q) \cdot 2^{-r - k - 2 \cdot q -1} \mid
+\end{eqnarray}
+
+In most cases when using CCT and/or VCT multipliers for $n=m$, a constant
+can be integrated within the block structure for each multiplier.
+However, there may be cases for non-standard sizes (e.g. $n \neq m$
+or $n = m \neq r$), that the constant can not be inserted into
+the hardware by utilization of a specialized full adder (SHA). 
+For cases where the
+constant can not be integrated within the block structure, the
+constant can be added after the CPA as shown in Figure~$3$.
+\begin{figure} 
+\begin{center}
+\setlength{\unitlength}{0.0105in}%
+\epsfig{figure=tdadda9-2.eps,height=3.0in}
+\end{center}
+\caption{Block Diagram of Dadda VCT multiplier with $n=m=8$, $r=9$, and
+$k=2$.}
+\end{figure}
+\begin{figure}[hbt]
+\begin{center}
+\setlength{\unitlength}{0.0105in}%
+\epsfig{figure=tarray9-2c.eps,height=2.5in}
+\end{center}
+\caption{Block Diagram of CCT array multiplier 
+with $n=m=8$, $r=9$, and $k=2$ and the constant after the final carry
+propagate addition.}
+\end{figure}
+
+\section{Hybrid truncated multipliers}
+
+Compared to CCT multipliers, VCT 
+multipliers have less average, mean square and maximum error for
+given 
+values of $r$ and $k$, but require more hardware. As discussed 
+in~\cite{schulte20}, 
+array multipliers can be implemented more efficiently as VCT
+multipliers 
+and tree multipliers can be implemented more efficiently as CCT 
+multipliers in VLSI designs.
+
+In this paper, we introduce a new method that combines both 
+the constant and variable correction methods to make a compromise 
+between both
+correction methods.  This multiplier, called a Hybrid 
+Correction Truncated (HCT) Multiplier, uses both constant and variable
+correction techniques to reduce the overall error.
+Since a CCT multiplier 
+has a maximum absolute error when the truncated partial product matrix
+is maximum and a VCT multiplier
+has maximum absolute error when the truncated 
+partial product matrix is close
+to zero, the HCT multiplier 
+method achieves a lower average,
+mean, and squared-error compared to CCT and VCT multipliers.
+
+In order to implement a HCT multiplier, a new parameter is
+introduced, $p$, that represents the percentage of variable correction
+to use for the correction.  This percentage is utilized to chose the
+number of partial products from column $m+n-r-k-1$ to be used to add 
+into column $m+n-r-k$.  The calculation of the number of variable
+correction bits is the following utilizing the number of bits used in
+the variable correction method, $N_{variable}$
+\begin{equation}
+N_{variable_{hybrid}} = floor (N_{variable} \times p)
+\end{equation}
+
+Similar to both the CCT and the VCT multipliers, a HCT 
+multiplier uses a correction constant
+to compensate for the rounding error.  However, since the correction
+constant will be based on a smaller number bits than a VCT multiplier, the
+correction constant is modified as follows
+\begin{equation}
+C_{VCT^{'}} = 2^{-r-k-2} \cdot N_{variable_{hybrid}}
+\end{equation}
+This produces a new correction constant based on the difference between
+the new variable
+correction constant and the constant correction constant in Equation~$3$.
+\begin{equation}
+C_{round} =  \frac{round ((C_{CCT} - C_{VCT^{'}}) \cdot
+2^{r+k})}{2^{r+k}}
+\end{equation}
+
+Figure~$4$ shows an array HCT multiplier and Figure~$5$ shows
+a HCT multiplier 
+that uses Dadda's method of partial product 
+reduction~\cite{dadda}. 
+The rounding correction constant for the HCT array multiplier is
+$C_{round} = 0.5 \times 2^{-9}$, which is implemented in the
+block diagram by changing one of the 
+MHAs in the second row to a SHA.
+The HCT
+Dadda multiplier also uses the same constant
+by making the circled element a one which can be
+reduced in the partial product matrix utilizing a SHA. The square
+around the partial products are the partial 
+products from column $8+8-9-2-1=4$
+that are added into column $8+8-9-2=5$.
+\begin{figure}[ht]
+\begin{center}
+\setlength{\unitlength}{0.0105in}%
+\epsfig{figure=tarray9-2h.eps,height=2.5in}
+\end{center}
+\caption{Block Diagram of array HCT multipliers 
+with $n=m=8$, $r=9$, $k=2$, and $p=0.5$.}
+\end{figure}
+\begin{figure}[ht]
+\begin{center}
+\setlength{\unitlength}{0.0105in}%
+\epsfig{figure=tdadda9-2h.eps,height=3.5in}
+\end{center}
+\caption{Block Diagram of Dadda HCT multipliers 
+with $n=m=8$, $r=9$, $k=2$, and $p=0.5$.}
+\end{figure}
+Table~$1$ displays the average, mean square, and maximum absolute error
+for several multipliers.  Overall, HCT multiplier's have less average,
+squared, and maximum absolute error than both the CCT and VCT 
+multipliers.
+\begin{table*} [ht]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|} \hline
+Method      & $N$ by $M$ & $E_{avg}$ & $E_{sqr}$ & $E_{max}$ & k & p \\ \hline \hline
+CCT         &  4 by 4   & -2.93E-03 & 3.32E-04 & 3.52E-02 & 2 & - 
+\\ \hline
+VCT         & 4 by 4    &  1.56E-02 & 6.29E-04 & 5.86E-02 & 1 & -
+\\ \hline
+HCT         & 4 by 4    & -5.86E-03 & 4.46E-04 & 4.69E-02 & 1 & 0.4
+\\ \hline \hline
+CCT         &  8 by 8   & -2.37E-04 & 1.42E-06 & 2.94E-03 & 3 & -
+\\ \hline
+VCT         & 8 by 8    &  4.92E-04 & 1.64E-06 & 3.31E-03 & 2 & -
+\\ \hline
+HCT         & 8 by 8    & -3.81E-06 & 1.54E-06 & 3.56E-03 & 2 & 0.5
+\\ \hline \hline
+CCT         &  12 by 12 & 3.83E-06 & 5.18E-09 & 1.98E-04 & 4 & -
+\\ \hline
+VCT         & 12 by 12  &  1.53E-05 & 5.39E-09 & 1.80E-04 & 3 & -
+\\ \hline
+HCT         & 12 by 12  & -1.52-05 & 6.26E-09 & 2.27E-04 & 2 & 0.8
+\\ \hline \hline
+CCT         &  16 by 16 & 2.38E-07 & 2.08E-11 & 1.53E-05 & 4 & -
+\\ \hline
+VCT         & 16 by 16  &  9.54E-07 & 2.13E-11 & 1.25E-05 & 3 & -
+\\ \hline
+HCT         & 16 by 16  &  4.77E-07 & 2.16E-11 & 1.45E-05 & 3 & 0.7
+\\ \hline \hline
+\end{tabular}
+\caption{Maximum absolute error $E_{max}$, average error $E_{avg}$, 
+and squared error $E_{sqr}$ for CCT, VCT, and HCT multipliers.}
+\end{table*}
+
+\section{Results}
+
+Power, delay, and area estimates were made to compare 
+standard parallel multipliers and truncated parallel multipliers for
+all three methods. 
+%The truncated array multipliers use the VCT
+%multiplication method~\cite{king} and the truncated tree multipliers use
+%the CCT multiplication method~\cite{schulte20}.
+%All multipliers were implemented usin
+%and a standard cell 
+%library that has an effective gate length of 0.25
+%microns.  
+The design flow utilized with Xilinx's FPGA environment.  Xilinx's Virtex2
+FPGA is chosen because the Virtex series employs a powerful configurable logic
+block (CLB) architecture with spped, utililzation and re-preprogammable
+advantages for use in FPGA DSP based designs.
+
+Perl scripts were written to automatically generate Verilog
+netlists for the multipliers for a range of $N$ by $M$ sizes~\cite{duverne}. 
+Additionally, each design is coded so that fast carry chain propagation is utilized within
+the final carry propagate adder for each multiplier~\cite{xilinx}.
+The Verilog designs were imported into
+the Xilinx's Integrated Software Environment for Xilinx's Virtex2v250
+FPGA.  Although the designs presented
+in this paper are implemented in FPGAs, the algorithm can be equally applied
+to VLSI designs.  
+The circuits
+were simulated at $1.5$ Volts and $25^{\circ}$ C. 
+
+Power is estimated 
+using a switch-level power estimation tool called Xpower.  
+Xpower calculates power based on the observation that dynamic power
+consumption
+in CMOS circuits is primarily due to switching activity.  Each element within
+the FPGA that can switch has a capacitance model associated with it.  Inputs are
+back-annotated from Cadence Design System's Verilog-XL simulated with
+$50,000$ random test patterns.  The accuracy of the switching activity data
+is crucial to obtaining an accurate estimation of power consumption.
+
+Table~$2$ gives power, delay and area estimates 
+for non-truncated array and Dadda multipliers with operand sizes of 
+$4$, $8$, $12$, and $16$ bits. 
+Area estimates are given in $BELS$ or basic elements which are all
+the logical cells that are basic elements of Xilinx Virtex technology.
+%The estimates for the truncated
+%array multipliers are ized with respect to equivalent
+%standard array multipliers. 
+As mentioned previously, for both the standard and
+truncated multipliers, the final CPA is 
+utilizes dedicated carry logic
+within each CLB that provides fast arithmetic carry capabilitiy for
+high-speed
+arithmetic function.  
+\begin{table*}
+\centering
+\label{mult1.tbl}
+\begin{tabular}{|c|r|r|r||r|r|r||r|r|r||r|r|r||} \hline
+\multicolumn{1}{|c|}{} & \multicolumn{3}{|c||}{Array} &
+\multicolumn{3}{|c||}{Dadda} \\ \hline
+   & Power & Delay & Area & Power & Delay & Area \\ 
+r  & (mW)  & (ns)  & (BELS) & (mW) & (ns) & (BELS)   \\ \hline \hline
+4  &  453.90  & 11.249 &  30 & 284.03 & 10.300 &  36 \\ \hline 
+8  & 1,028.23 & 15.548 & 126 & 318.03 & 13.574 & 153 \\ \hline 
+12 & 2,060.57 & 19.891 & 286 & 385.78 & 15.268 & 358 \\ \hline 
+16 & 3,594.77 & 23.921 & 510 & 484.90 & 16.364 & 642 \\ \hline 
+\end{tabular}
+\caption{Estimates for non-truncated multipliers.}
+\end{table*}
+
+Table~$3$ gives power, delay and area estimates 
+for truncated array multipliers with operand sizes of 
+$4$, $8$, $12$, and $16$ bits using the sizes in Table~$1$. 
+Compared to 
+non-truncated array multipliers, the truncated array multipliers
+dissipate between $39$ and $84$ percent less power, and use
+between $13$ and $32$ percent less area. As opposed to previous research,
+which shows that truncated multipliers have a worst-case delay that
+is less than non-truncated multipliers, implementations in FPGA show
+little change in delay.  This occurs because a large part of the delay
+is mitigated by the fast carry chains with the Xilinx Virtex2 FPGA.  For
+FPGA's that do not have fast carry-chain logic, truncated multipliers
+provides an additional benefit for the critical path.
+
+Table~$4$ gives power, delay and area estimates 
+for truncated tree multipliers with operand sizes of 
+$4$, $8$, $12$, and $16$ bits. 
+%The estimates for the truncated
+%tree multipliers are normalized with respect to equivalent
+%standard tree multipliers. 
+%For both the standard and 
+%truncated multipliers, the CPA is implemented 
+%using a carry-lookahead adder. 
+Compared to non-truncated
+tree multipliers, the tree multipliers
+dissipate between $9$ and $19$ percent less power, and use
+between $17$ and $31$ percent less area. Similar to array multipliers, the
+delay for tree multipliers varies slightly for each tree multiplier.
+\begin{table*}
+\centering
+\label{tarray1.tbl}
+\begin{tabular}{|c|r|r|r||r|r|r||r|r|r||} \hline
+\multicolumn{1}{|c|}{} & \multicolumn{3}{|c||}{CCT} &
+\multicolumn{3}{|c||}{VCT} &  \multicolumn{3}{|c||}{HCT} \\ \hline
+   & Power & Delay & Area & Power & Delay & Area &
+Power & Delay & Area \\ 
+r  & (mW) & (ns) & (BELS) & (mW) & (ns) & (BELS) &
+(mW) & (ns) & (BELS) \\ \hline \hline
+4  & 251.79 & 11.249 &  26 & 250.80 & 11.172 & 22  &
+ 275.20 & 12.124 &  24 \\ \hline 
+8  & 468.89 & 15.506 & 102 & 310.12 & 16.506 & 95  &
+ 311.68 & 15.548 & 93 \\ \hline 
+12 & 663.46 & 19.994 & 225 & 400.94 & 20.843 & 212 &
+382.91 & 20.843 & 195 \\ \hline 
+16 & 574.02 & 23.921 & 373 & 555.96 & 24.873 & 352 &
+531.52 & 23.921 & 350 \\ \hline 
+\end{tabular}
+\caption{Estimates for truncated array multipliers for $n=m=r$.}
+\end{table*}
+\begin{table*}
+\centering
+\label{tarray2.tbl}
+\begin{tabular}{|c|r|r|r||r|r|r||r|r|r||} \hline
+\multicolumn{1}{|c|}{} & \multicolumn{3}{|c||}{CCT} &
+\multicolumn{3}{|c||}{VCT} &  \multicolumn{3}{|c||}{HCT} \\ \hline
+   & Power & Delay & Area & Power & Delay & Area &
+Power & Delay & Area \\ 
+r  & (mW) & (ns) & (BELS) & (mW) & (ns) & (BELS) &
+(mW) & (ns) & (BELS) \\ \hline \hline
+4  & 223.14 & 11.181 &  30 & 257.94 & 11.133 & 27  &
+ 247.10 & 11.054 &  25 \\ \hline 
+8  & 283.95 & 14.550 & 116 & 270.19 & 14.112 & 118  &
+ 265.33 & 13.562 & 108 \\ \hline 
+12 & 332.23 & 15.991 & 266 & 337.44 & 15.991 & 265 &
+319.73 & 15.731 & 248 \\ \hline 
+16 & 395.94 & 17.396 & 446 & 405.16 & 17.706 & 456 &
+393.96 & 17.438 & 447 \\ \hline 
+\end{tabular}
+\caption{Estimates for truncated Dadda multipliers for $n=m=r$.}
+\end{table*}
+
+Since HCT multipliers have less average and 
+maximum absolute error than CCT and VCT multipliers, savings in 
+area and power
+consumption are slighly more pronounced.  Interestingly, HCT multipliers may
+not be efficient for a given implementation even though the implementation
+has less average and maximum absolute error.  In addition, 
+CCT multipliers may benefit
+additionally
+from a FPGA architecture
+that have storage elements within each CLB.  Theoretically, based on the
+improvements shown for HCT multipliers in Table~$3$ and $4$, 
+similar benefits are possible for
+standard and custom-cell VLSI implementations.
+
+\section{Summary}
+
+Truncated multiplication provides an efficient method for 
+reducing the power dissipation and area of rounded parallel 
+multipliers. A new method for employing truncated multiplication
+is introduced that takes advantage of the advantages of both
+constant-correction truncation and variable-correction truncated
+multipliers.  Simulations indicate that
+HCT multipliers have less
+average, squared, and maximum absolute error than both CCT
+and HCT methods for truncation.  
+
+In addition, hybrid-correction truncated 
+multipliers perform better either CCT or VCT truncated multipliers for operand sizes
+between $4$ and $16$ bits.  More importantly, 
+HCT multipliers can be optimized for 
+array and/or Dadda-based multipliers by varying the percentage, $p$.
+In addition, since new high-performance FPGA's, such as Xilinx's FPGA,
+provide strong benefits for digital signal processing, 
+truncated multipliers can benefit strongly for areas that
+requires speciall attention to area, delay, and power where the accuracy of
+the result is not critical.
+
+The techniques presented in this paper can also be applied to 
+two's complement multipliers, Booth-encoded multipliers, 
+and multipliers that use higher-order counters and compressors. 
+Other methods for reducing power dissipation can be applied 
+to truncated multipliers to further improve their power 
+dissipation such as different operand encodings.
+\bibliographystyle{ieeetr}
+\bibliography{dsd03}
+
+\end{document}
