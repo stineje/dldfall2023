@@ -1,0 +1,37 @@
+@techreport{dsdb1,
+  title = "{User Manual: NI Digital System Development Board}",
+  institution = "National Instruments",
+  number = "Pub ID: 376627B-01",
+  year = "2018",
+}
+
+@book{10.5555/2815529,
+author = {Harris, Sarah and Harris, David},
+title = {Digital Design and Computer Architecture: ARM Edition},
+year = {2015},
+isbn = {0128000562},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+edition = {1st},
+}
+
+@book{ddca-riscv,
+author = {Harris, Sarah and Harris, David},
+title = {Digital Design and Computer Architecture: RISC-V Edition},
+year = {2021},
+isbn = {9780128200643},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+edition = {1st},
+}
+
+@ARTICLE{7086413,
+author={Trimberger, Stephen M.},
+journal={Proceedings of the IEEE},
+title={Three Ages of {FPGAs}: A Retrospective on the First Thirty Years of {FPGA} Technology},
+year={2015},
+volume={103},
+number={3},
+pages={318-331},
+doi={10.1109/JPROC.2015.2392104}
+}

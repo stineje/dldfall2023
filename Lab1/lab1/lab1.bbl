@@ -1,0 +1,30 @@
+\begin{thebibliography}{1}
+\providecommand{\url}[1]{#1}
+\csname url@rmstyle\endcsname
+\providecommand{\newblock}{\relax}
+\providecommand{\bibinfo}[2]{#2}
+\providecommand\BIBentrySTDinterwordspacing{\spaceskip=0pt\relax}
+\providecommand\BIBentryALTinterwordstretchfactor{4}
+\providecommand\BIBentryALTinterwordspacing{\spaceskip=\fontdimen2\font plus
+\BIBentryALTinterwordstretchfactor\fontdimen3\font minus
+  \fontdimen4\font\relax}
+\providecommand\BIBforeignlanguage[2]{{%
+\expandafter\ifx\csname l@#1\endcsname\relax
+\typeout{** WARNING: IEEEtran.bst: No hyphenation pattern has been}%
+\typeout{** loaded for the language `#1'. Using the pattern for}%
+\typeout{** the default language instead.}%
+\else
+\language=\csname l@#1\endcsname
+\fi
+#2}}
+
+\bibitem{5354441}
+``{IEEE} standard for {SystemVerilog}--unified hardware design, specification,
+  and verification language,'' \emph{IEEE STD 1800-2009}, pp. 1--1285, 2009.
+
+\bibitem{ddca-riscv}
+S.~Harris and D.~Harris, \emph{Digital Design and Computer Architecture: RISC-V
+  Edition}, 1st~ed.\hskip 1em plus 0.5em minus 0.4em\relax San Francisco, CA,
+  USA: Morgan Kaufmann Publishers Inc., 2021.
+
+\end{thebibliography}
