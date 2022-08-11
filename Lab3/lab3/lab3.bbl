@@ -1,0 +1,15 @@
+\begin{thebibliography}{1}
+
+\bibitem{DBLP:books/daglib/0067158}
+John~F. Wakerly,
+\newblock {\em Digital design - principles and practices},
+\newblock Prentice Hall Series in computer engineering. Prentice Hall, USA, 4th
+  edition, 2005.
+
+\bibitem{ddca-riscv}
+Sarah Harris and David Harris,
+\newblock {\em Digital Design and Computer Architecture: RISC-V Edition},
+\newblock Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 1st edition,
+  2021.
+
+\end{thebibliography}
