@@ -1,7 +1,7 @@
 # dldfall2022
 
 <pre>
-James E. Stine, Jr. and Rachana Erra
+James E. Stine, Jr.
 james.stine@okstate.edu 
 Oklahoma State University
 School of Electrical and Computer Engineering
