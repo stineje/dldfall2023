@@ -34,7 +34,7 @@
 
 % ----- Identifying Information -----------------------------------------------
 \newcommand{\myassignment}{Lab 2: Complex Combinational Logic and Debugging : Hardware-based Data Encryption Standard (DES)}
-\newcommand{\myduedate}{Assigned: Tuesday 9/28; Due \textbf{Monday 10/15} (midnight)}
+\newcommand{\myduedate}{Assigned: Tuesday 9/26; Due \textbf{Monday 10/21} (midnight)}
 \newcommand{\myinstructor}{Instructor: James E. Stine, Jr.}
 % -----------------------------------------------------------------------------
 
@@ -51,7 +51,7 @@
 
 Digital systems are important in all areas of society and using
 combinational logic is a key element to this
-development~\cite{10.5555/2815529}.  This
+development~\cite{ddca-riscv}.  This
 laboratory will give you more experience with combinational logic
 for digital systems.  
 Security is a major design concern for all devices, including those  we
@@ -154,7 +154,7 @@ in least-significant positions.  Fortunately, SystemVerilog (SV) makes
 rotation and shifting easy to create with bit-swizzling.
 
 Bit swizzling is SV is achieved with the curly braces \{ and \}.
-Using an example from our textbook~\cite{10.5555/2815529}, where $y$ is
+Using an example from our textbook~\cite{ddca-riscv}, where $y$ is
 given as a $9$-bit value
 $c_2c_1d_0d_0d_0c_0101$ using bit swizzling operations.  This can be
 created in SV by the following statement.
@@ -190,7 +190,11 @@ is useful in that it can be utilized for numbers that have
 properties that are sometimes called modular arithmetic.  We will not
 go into the theory behind this idea, but you are welcome to explore
 more of cryptography in
-these great texts~\cite{10.5555/1721909, 10.5555/2523199}.
+these great texts~\cite{10.5555/1721909,
+  10.5555/2523199}~\footnote{The reference~\cite{10.5555/1721909} is available
+electronically in Edmon Low library at
+\url{http://library.okstate.edu}.  It an extremely good reference for
+those interested in cryptography}.
 
 The symmetric-based cryptographic
 algorithm of DES block diagram
@@ -777,6 +781,16 @@ generation is slightly easier than operations like the Feistel block,
 so it will optimize your design process if you focus on this block
 first.  However, I would use the strategy that works the best for you.
 
+\subsection{Power, Performance and Area (PPA)}
+
+As with the first laboratory, you should discuss your
+Power, Performance and Area (PPA)
+analysis.  You should document in your report how much PPA is utilized
+for your final design.  Similar to the previous laboratory, please report
+the total number of ``slices'' used for your design.  We are going to
+expand this laboratory to discuss timing, as well.  That is, we will
+document Performance and Area and leave power to our final project.
+
 \subsection{Testing and Stubbing Code}
 
 You should use the testbenches you utilized for Lab0 and Lab1 to help
@@ -914,10 +928,10 @@ design.
 One possible improvement is to work on optimizing the verification
 of your design.  You can do any other modification (e.g., re-writing
 the Java code) or the DES implementation in Java, as well.
-Yet another piece of extra credit is analyzing how fast you can run
-DES through the FPGA.  This will involve using Vivado to analyze how fast your
-design can be and doing some calculations on how fast you can encrypt
-and decrypt your data.
+%Yet another piece of extra credit is analyzing how fast you can run
+%DES through the FPGA.  This will involve using Vivado to analyze how fast your
+%design can be and doing some calculations on how fast you can encrypt
+%and decrypt your data.
 
 You also have the opportunity to enhance the DES and creating 3DES
 which is sometimes called triple DES.  Triple DES is still used in

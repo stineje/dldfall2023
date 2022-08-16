@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.4)  11 AUG 2022 08:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.4)  16 AUG 2022 07:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -543,7 +543,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 85.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<crypto_hw.png, id=80, 297.36093pt x 117.43875pt>
+<crypto_hw.png, id=84, 297.36093pt x 117.43875pt>
 File: crypto_hw.png Graphic file (type png)
 <use crypto_hw.png>
 Package pdftex.def Info: crypto_hw.png  used on input line 136.
@@ -556,65 +556,68 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ) [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-<des-main.png, id=109, 210.41109pt x 230.73703pt>
+<des-main.png, id=116, 210.41109pt x 230.73703pt>
 File: des-main.png Graphic file (type png)
 <use des-main.png>
-Package pdftex.def Info: des-main.png  used on input line 205.
+Package pdftex.def Info: des-main.png  used on input line 209.
 (pdftex.def)             Requested size: 231.4529pt x 253.8115pt.
  [2 <./crypto_hw.png>]
 [3 <./des-main.png>]
-<des-key.png, id=141, 231.48984pt x 261.22594pt>
+<des-key.png, id=151, 231.48984pt x 261.22594pt>
 File: des-key.png Graphic file (type png)
 <use des-key.png>
-Package pdftex.def Info: des-key.png  used on input line 350.
+Package pdftex.def Info: des-key.png  used on input line 354.
 (pdftex.def)             Requested size: 231.48926pt x 261.22528pt.
  [4] [5 <./des-key.png>] [6]
-<des-round.png, id=180, 177.66376pt x 151.69171pt>
+<des-round.png, id=189, 177.66376pt x 151.69171pt>
 File: des-round.png Graphic file (type png)
 <use des-round.png>
-Package pdftex.def Info: des-round.png  used on input line 511.
+Package pdftex.def Info: des-round.png  used on input line 515.
 (pdftex.def)             Requested size: 177.66331pt x 151.69133pt.
-<des.png, id=186, 205.5178pt x 205.89423pt>
+<des.png, id=195, 205.5178pt x 205.89423pt>
 File: des.png Graphic file (type png)
 <use des.png>
-Package pdftex.def Info: des.png  used on input line 576.
+Package pdftex.def Info: des.png  used on input line 580.
 (pdftex.def)             Requested size: 143.86148pt x 144.12495pt.
  [7 <./des-round.png>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 615.
- [8 <./des.png>] [9] [10]
-<modelsim.png, id=231, 1437.37pt x 795.97375pt>
+put line 619.
+ [8 <./des.png>] [9] [10] [11]
+<modelsim.png, id=250, 1437.37pt x 795.97375pt>
 File: modelsim.png Graphic file (type png)
 <use modelsim.png>
-Package pdftex.def Info: modelsim.png  used on input line 831.
+Package pdftex.def Info: modelsim.png  used on input line 845.
 (pdftex.def)             Requested size: 431.21432pt x 238.79396pt.
- [11] [12 <./modelsim.png>]
-<modelsim-tips1.png, id=256, 589.70313pt x 507.8975pt>
+ [12 <./modelsim.png>]
+<modelsim-tips1.png, id=263, 589.70313pt x 507.8975pt>
 File: modelsim-tips1.png Graphic file (type png)
 <use modelsim-tips1.png>
-Package pdftex.def Info: modelsim-tips1.png  used on input line 898.
+Package pdftex.def Info: modelsim-tips1.png  used on input line 912.
 (pdftex.def)             Requested size: 235.87706pt x 203.1554pt.
-<modelsim-tips2.png, id=257, 1290.32062pt x 122.95938pt>
+<modelsim-tips2.png, id=264, 1290.32062pt x 122.95938pt>
 File: modelsim-tips2.png Graphic file (type png)
 <use modelsim-tips2.png>
-Package pdftex.def Info: modelsim-tips2.png  used on input line 904.
+Package pdftex.def Info: modelsim-tips2.png  used on input line 918.
 (pdftex.def)             Requested size: 412.91104pt x 39.3478pt.
  [13 <./modelsim-tips1.png> <./modelsim-tips2.png>] (./lab2.bbl) 
 AED: lastpage setting LastPage
 [14] (./lab2.aux)
 Package rerunfilecheck Info: File `lab2.out' has not changed.
-(rerunfilecheck)             Checksum: 03E041E78F0FD623724E7EAE27E54888;2920.
+(rerunfilecheck)             Checksum: ED4B30647D0B62C645A87185916F5445;3161.
  ) 
 Here is how much of TeX's memory you used:
- 12266 strings out of 478994
- 183122 string characters out of 5858185
- 505146 words of memory out of 5000000
- 29458 multiletter control sequences out of 15000+600000
- 418021 words of font info for 61 fonts, out of 8000000 for 9000
+ 12271 strings out of 478994
+ 183174 string characters out of 5858185
+ 505141 words of memory out of 5000000
+ 29460 multiletter control sequences out of 15000+600000
+ 418334 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  83i,14n,88p,386b,438s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exi
 st, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
+, replaced by a fixed one
 
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{
 /usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</u
@@ -635,11 +638,12 @@ mf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2021/texmf
 ist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2021/texmf-dis
 t/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2021/texmf-dist/
 fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2021/texmf-dist/fo
-nts/type1/public/cm-super/sftt1000.pfb>
-Output written on lab2.pdf (14 pages, 566363 bytes).
+nts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2021/texmf-dist/font
+s/type1/public/cm-super/sftt1000.pfb>
+Output written on lab2.pdf (14 pages, 597248 bytes).
 PDF statistics:
- 354 PDF objects out of 1000 (max. 8388607)
- 304 compressed objects within 4 object streams
- 78 named destinations out of 1000 (max. 500000)
- 185 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 367 PDF objects out of 1000 (max. 8388607)
+ 316 compressed objects within 4 object streams
+ 80 named destinations out of 1000 (max. 500000)
+ 193 words of extra memory for PDF output out of 10000 (max. 10000000)
 

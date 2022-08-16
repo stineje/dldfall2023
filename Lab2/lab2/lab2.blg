@@ -6,7 +6,7 @@ Database file #1: lab2.bib
 Warning--can't use both author and editor fields in Biryukov2005
 You've used 5 entries,
             1838 wiz_defined-function locations,
-            488 strings with 4226 characters,
+            488 strings with 4224 characters,
 and the built_in function-call counts, 1021 in all, are:
 = -- 96
 > -- 32

@@ -1,10 +1,10 @@
 \begin{thebibliography}{1}
 
-\bibitem{10.5555/2815529}
+\bibitem{ddca-riscv}
 Sarah Harris and David Harris,
-\newblock {\em Digital Design and Computer Architecture: ARM Edition},
+\newblock {\em Digital Design and Computer Architecture: RISC-V Edition},
 \newblock Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 1st edition,
-  2015.
+  2021.
 
 \bibitem{fips463}
 {National Institute of Standards and Technology},
