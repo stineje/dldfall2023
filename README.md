@@ -14,6 +14,11 @@ Respository for ECEN 3233 Digital Logic Design at Oklahoma State University for 
 
 Although tentative due dates are given, pay attention to dates given on Canvas as well as in class.  Later labs may be updated as we move throughout the semester, so make sure you pull often.
 
+**Location and Training:**<br/>
+Laboratory is held in ENDV 350 (https://ceat.okstate.edu/labs/endeavor/)
+
+First week of class is important for logistics as well as getting access to Endeavor 
+
 **Labs:**<br/>
 This repository is broken down into each laboratory and should be
 cloned on your desktop.  It contains System Verilog, testbenches,
