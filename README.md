@@ -10,6 +10,9 @@ VLSI Computer Architecture Research Group
 
 Respository for ECEN 3233 Digital Logic Design at Oklahoma State University for the Fall 2022 semester!
 
+**Due Dates:**<br/>
+
+Although tentative due dates are given, pay attention to dates given on Canvas as well as in class.  Later labs may be updated as we move throughout the semester, so make sure you pull often.
 
 **Labs:**<br/>
 This repository is broken down into each laboratory and should be
