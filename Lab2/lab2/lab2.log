@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.6.15)  28 SEP 2022 15:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.6.15)  28 SEP 2022 15:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -595,21 +595,21 @@ Overfull \hbox (158.99884pt too wide) in paragraph at lines 691--692
  []
 
 [10 <./analysis.png>] [11] [12]
-<modelsim.png, id=265, 1437.37pt x 795.97375pt>
+<modelsim.png, id=266, 1437.37pt x 795.97375pt>
 File: modelsim.png Graphic file (type png)
 <use modelsim.png>
-Package pdftex.def Info: modelsim.png  used on input line 874.
+Package pdftex.def Info: modelsim.png  used on input line 875.
 (pdftex.def)             Requested size: 431.21432pt x 238.79396pt.
  [13 <./modelsim.png>]
-<modelsim-tips1.png, id=278, 589.70313pt x 507.8975pt>
+<modelsim-tips1.png, id=279, 589.70313pt x 507.8975pt>
 File: modelsim-tips1.png Graphic file (type png)
 <use modelsim-tips1.png>
-Package pdftex.def Info: modelsim-tips1.png  used on input line 941.
+Package pdftex.def Info: modelsim-tips1.png  used on input line 942.
 (pdftex.def)             Requested size: 235.87706pt x 203.1554pt.
-<modelsim-tips2.png, id=279, 1290.32062pt x 122.95938pt>
+<modelsim-tips2.png, id=280, 1290.32062pt x 122.95938pt>
 File: modelsim-tips2.png Graphic file (type png)
 <use modelsim-tips2.png>
-Package pdftex.def Info: modelsim-tips2.png  used on input line 947.
+Package pdftex.def Info: modelsim-tips2.png  used on input line 948.
 (pdftex.def)             Requested size: 412.91104pt x 39.3478pt.
  [14 <./modelsim-tips1.png> <./modelsim-tips2.png>] (./lab2.bbl) 
 AED: lastpage setting LastPage
@@ -618,8 +618,8 @@ Package rerunfilecheck Info: File `lab2.out' has not changed.
 (rerunfilecheck)             Checksum: 6F1A6D14367936FA6B40BB747E0279AA;3161.
  ) 
 Here is how much of TeX's memory you used:
- 13062 strings out of 478287
- 208865 string characters out of 5849289
+ 13063 strings out of 478287
+ 208872 string characters out of 5849289
  514689 words of memory out of 5000000
  30955 multiletter control sequences out of 15000+600000
  484163 words of font info for 63 fonts, out of 8000000 for 9000
@@ -648,10 +648,10 @@ ublic/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1
 texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/pu
 blic/cm-super/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt08
 00.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on lab2.pdf (15 pages, 686118 bytes).
+Output written on lab2.pdf (15 pages, 686189 bytes).
 PDF statistics:
- 402 PDF objects out of 1000 (max. 8388607)
- 328 compressed objects within 4 object streams
- 86 named destinations out of 1000 (max. 500000)
+ 403 PDF objects out of 1000 (max. 8388607)
+ 329 compressed objects within 4 object streams
+ 87 named destinations out of 1000 (max. 500000)
  198 words of extra memory for PDF output out of 10000 (max. 10000000)
 
