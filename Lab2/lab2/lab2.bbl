@@ -27,4 +27,10 @@ William Stallings,
 \newblock {\em Cryptography and Network Security: Principles and Practice},
 \newblock Prentice Hall Press, USA, 6th edition, 2013.
 
+\bibitem{7086413}
+Stephen~M. Trimberger,
+\newblock ``Three ages of {FPGAs}: A retrospective on the first thirty years of
+  {FPGA} technology,''
+\newblock {\em Proceedings of the IEEE}, vol. 103, no. 3, pp. 318--331, 2015.
+
 \end{thebibliography}

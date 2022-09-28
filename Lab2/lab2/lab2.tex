@@ -654,6 +654,45 @@ the pseudo-code for each.
 \State $\text{plain block} = FP(\{L[0], R[0]\})$
 \end{algorithmic}
 \end{algorithm}
+
+\subsection{Power, Performance and Area (PPA)}
+
+For this laboratory, we are going to analyze the design with better
+PPA.  That is, you should analyze your design for Power, Performance
+and Area.  As opposed to previous laboratories, this procedure that
+will be documented here is more robust and gives better numbers that
+you can use to assess whether your design is credible or not.  As with
+any digital design, engineers use PPA to assess the level of
+difficulty, challenge, and effort needed for a design.
+
+To assess your PPA for this design, you should determine its PPA after
+implementation.  This is because some of the PPA results (e.g.,
+timing) are not adjusted properly until the Implementation phase.  The
+Implementation phase typically places and routes the design onto the
+FPGA by connecting all the logic blocks that we read about in the
+article that we looked at in Lab 0~\cite{7086413}.
+
+To obtain the PPA results, you first have to run through your design
+making sure that it is implemented correctly.  Then, you need to add
+the following reports after the route stage (i.e., during
+Implementation):
+\begin{enumerate}
+\item \verb!report_utilization! : Area
+\item \verb!report_timing! : Performance
+\item \verb!report_power! : Power
+\end{enumerate}
+You can the reports you need by clicking on the reports tab, right
+mouse clicking, and then adding the report you need, as shown in
+Figure~\ref{reports1.png}.  Once you add the report, it is easiest to
+re-run the implementation to get the report.  Clicking on the option
+gets you specific report which you can save.
+\begin{figure} [t!]
+  \centering
+  \includegraphics[scale=0.3]{analysis.png}
+  \caption{Reports Window within Xilinx Vivado}
+  \label{reports1.png}
+\end{figure}
+
   
 \section{Tasks}
 
@@ -780,16 +819,6 @@ once this works, debug the encryption/decryption next.  The key
 generation is slightly easier than operations like the Feistel block,
 so it will optimize your design process if you focus on this block
 first.  However, I would use the strategy that works the best for you.
-
-\subsection{Power, Performance and Area (PPA)}
-
-As with the first laboratory, you should discuss your
-Power, Performance and Area (PPA)
-analysis.  You should document in your report how much PPA is utilized
-for your final design.  Similar to the previous laboratory, please report
-the total number of ``slices'' used for your design.  We are going to
-expand this laboratory to discuss timing, as well.  That is, we will
-document Performance and Area and leave power to our final project.
 
 \subsection{Testing and Stubbing Code}
 
