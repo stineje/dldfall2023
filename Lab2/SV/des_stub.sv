@@ -858,6 +858,9 @@ module DES (input logic [63:0] key, input logic [63:0] plaintext,
    logic [47:0] 	SubKey5, SubKey6, SubKey7, SubKey8;   
    logic [47:0] 	SubKey9, SubKey10, SubKey11, SubKey12;
    logic [47:0] 	SubKey13, SubKey14, SubKey15, SubKey16;
+
+   logic [63:0] 	ip_out;   
+   logic [63:0] 	r16_out = 64'h0;   
    
    // SubKey generation
    GenerateKeys k1 (key, SubKey1, SubKey2, SubKey3, SubKey4,
