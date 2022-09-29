@@ -9,486 +9,110 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 d/home/jstine/Desktop/dldfall2022/Lab2/SV
+Z0 d//Mac/Home/Desktop/dldfall2022/Lab2/SV
 T_opt
-Z1 !s110 1664379851
-VM`=Wa86]X39G_lndR4RQ12
+Z1 !s110 1664455047
+VCAP`C2afcd6]iJe4>6]GF2
 04 8 4 work stimulus fast 0
-=1-000ae431a4f1-63346bcb-aecd9-52ce7
+=1-001c426e9c59-63359187-14e-7e8
 !s124 OEM100
 o-quiet -auto_acc_if_foreign -work work +acc
 Z2 tCvgOpt 0
 n@_opt
-OE;O;2021.3;73
-vDES
+OL;O;2021.3;73
+vfa
 Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
 R1
 !i10b 1
-!s100 F_faSV2E6YNVPFn@RLAPC0
-I^lJX<I?;E4Y5T7AOjX<?U1
+!s100 K]=^Q0U^9HEH6gRNG>XEf1
+IXe2HF=dleJf:a[Y0nkefK2
 S1
 R0
-Z4 w1664367707
-Z5 8des_stub.sv
-Z6 Fdes_stub.sv
+w1664454993
+8fa.sv
+Ffa.sv
 !i122 0
-L0 854 56
-Z7 VDg1SIo80bB@j0V0VzS_@n1
-Z8 OE;L;2021.3;73
+L0 1 17
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2021.3;73
 r1
 !s85 0
 31
-Z9 !s108 1664379851.000000
-Z10 !s107 tb_des.sv|des_stub.sv|
-Z11 !s90 des_stub.sv|tb_des.sv|
+Z6 !s108 1664455046.000000
+Z7 !s107 test_rca8.sv|rca8.sv|fa.sv|ha.sv|
+Z8 !s90 -reportprogress|300|ha.sv|fa.sv|rca8.sv|test_rca8.sv|
 !i113 0
-Z12 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z9 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R2
-n@d@e@s
-vEF
+vha
 R3
 R1
 !i10b 1
-!s100 7X>dV?B6W`mhNBL=al8lU3
-IcXD9hR9_n0GfG7M9VV8@Q2
+!s100 Ido]X@c?B=INKHcK46PF?0
+IeLc]KkQUH8=SSWgHaaeQn1
 S1
 R0
+w1664454991
+8ha.sv
+Fha.sv
+!i122 0
+L0 1 13
 R4
 R5
-R6
-!i122 0
-L0 60 6
-R7
-R8
 r1
 !s85 0
 31
-R9
-R10
-R11
+R6
+R7
+R8
 !i113 0
-R12
+R9
 R2
-n@e@f
-vfeistel
+vrca8
 R3
 R1
 !i10b 1
-!s100 Q]C_FnCdmJ3d9Yn@E;bla0
-IUEQD3z48IWjELlVRPoNA@1
+!s100 <f9CbGo49GY@FHf=J_9YL3
+IGDbEn8<CI6F_bQDjj@IGG0
 S1
 R0
+w1664454997
+8rca8.sv
+Frca8.sv
+!i122 0
+L0 1 20
 R4
 R5
-R6
-!i122 0
-L0 67 7
-R7
-R8
 r1
 !s85 0
 31
-R9
-R10
-R11
-!i113 0
-R12
-R2
-vFP
-R3
-R1
-!i10b 1
-!s100 l?LJ_lS7XQU?o?3fVEYBW0
-IZaZk`0J?KQ]8:njf^G6hh3
-S1
-R0
-R4
-R5
 R6
-!i122 0
-L0 158 71
 R7
 R8
-r1
-!s85 0
-31
-R9
-R10
-R11
 !i113 0
-R12
-R2
-n@f@p
-vGenerateKeys
-R3
-R1
-!i10b 1
-!s100 6E2k8=`XlQ:^aTe9Y2M1J0
-I[Y<fPjkoJWKG5zOOikzmT3
-S1
-R0
-R4
-R5
-R6
-!i122 0
-L0 7 25
-R7
-R8
-r1
-!s85 0
-31
 R9
-R10
-R11
-!i113 0
-R12
 R2
-n@generate@keys
-vIP
-R3
-R1
-!i10b 1
-!s100 VSXhme_5Xa^WcSK0dUzP^0
-IJh;4_Z>W>@Ff;WOEP_zAh3
-S1
-R0
-R4
-R5
-R6
-!i122 0
-L0 85 71
-R7
-R8
-r1
-!s85 0
-31
-R9
-R10
-R11
-!i113 0
-R12
-R2
-n@i@p
-vPC1
-R3
-R1
-!i10b 1
-!s100 Eel3PoKda6^d5_iKF`cOZ2
-I^S[IWRTo[C;K?OCM:aCJT0
-S1
-R0
-R4
-R5
-R6
-!i122 0
-L0 33 9
-R7
-R8
-r1
-!s85 0
-31
-R9
-R10
-R11
-!i113 0
-R12
-R2
-n@p@c1
-vPC2
-R3
-R1
-!i10b 1
-!s100 oz<iKk[oken219YIdBP4E2
-InbzC:[F[E<`]C89082_KD1
-S1
-R0
-R4
-R5
-R6
-!i122 0
-L0 43 7
-R7
-R8
-r1
-!s85 0
-31
-R9
-R10
-R11
-!i113 0
-R12
-R2
-n@p@c2
-vround
-R3
-R1
-!i10b 1
-!s100 FC0QNGh8zk=J7KG6OBff`1
-IgCW`5<Uk0RG80C]4A`9dM1
-S1
-R0
-R4
-R5
-R6
-!i122 0
-L0 76 7
-R7
-R8
-r1
-!s85 0
-31
-R9
-R10
-R11
-!i113 0
-R12
-R2
-vS1_Box
-R3
-R1
-!i10b 1
-!s100 VaXk1QHG6@VO9JAIc6Uen2
-I8QndIj5Bc]]iP`[fS:1_i2
-S1
-R0
-R4
-R5
-R6
-!i122 0
-L0 230 77
-R7
-R8
-r1
-!s85 0
-31
-R9
-R10
-R11
-!i113 0
-R12
-R2
-n@s1_@box
-vS2_Box
-R3
-R1
-!i10b 1
-!s100 S>n3;[5AEXW>F8SQ^m6>d2
-I=b4F8Xh>4clN:?jj>d7PG1
-S1
-R0
-R4
-R5
-R6
-!i122 0
-L0 308 77
-R7
-R8
-r1
-!s85 0
-31
-R9
-R10
-R11
-!i113 0
-R12
-R2
-n@s2_@box
-vS3_Box
-R3
-R1
-!i10b 1
-!s100 X0kTcI7NiCAYEUA[^B4GU0
-ISXnIPVFoTAeClemK14ZQn2
-S1
-R0
-R4
-R5
-R6
-!i122 0
-L0 386 77
-R7
-R8
-r1
-!s85 0
-31
-R9
-R10
-R11
-!i113 0
-R12
-R2
-n@s3_@box
-vS4_Box
-R3
-R1
-!i10b 1
-!s100 5]RimfkEdYTZi1XgK5B0C0
-Ia:D<cke5LJ`6g2?3JTfK:0
-S1
-R0
-R4
-R5
-R6
-!i122 0
-L0 464 77
-R7
-R8
-r1
-!s85 0
-31
-R9
-R10
-R11
-!i113 0
-R12
-R2
-n@s4_@box
-vS5_Box
-R3
-R1
-!i10b 1
-!s100 21T>ZoDM]P_RKO:O5:O_C3
-IF6J<HLjoeR0eA=FVladWD0
-S1
-R0
-R4
-R5
-R6
-!i122 0
-L0 542 77
-R7
-R8
-r1
-!s85 0
-31
-R9
-R10
-R11
-!i113 0
-R12
-R2
-n@s5_@box
-vS6_Box
-R3
-R1
-!i10b 1
-!s100 n`cXHLbjlR5c:e6mCQmV]3
-IQ<_6JJI58oW_:DZ]A?7PQ0
-S1
-R0
-R4
-R5
-R6
-!i122 0
-L0 620 77
-R7
-R8
-r1
-!s85 0
-31
-R9
-R10
-R11
-!i113 0
-R12
-R2
-n@s6_@box
-vS7_Box
-R3
-R1
-!i10b 1
-!s100 Z;A=7h9c_^z;=[UnVo`c:2
-IBE4Mfz^X=?Bjm<<jkKTZ90
-S1
-R0
-R4
-R5
-R6
-!i122 0
-L0 698 77
-R7
-R8
-r1
-!s85 0
-31
-R9
-R10
-R11
-!i113 0
-R12
-R2
-n@s7_@box
-vS8_Box
-R3
-R1
-!i10b 1
-!s100 `6D3?gkBQfNEolXePz09]2
-IX6<>:3R10B1C^D20<0CNL3
-S1
-R0
-R4
-R5
-R6
-!i122 0
-L0 776 77
-R7
-R8
-r1
-!s85 0
-31
-R9
-R10
-R11
-!i113 0
-R12
-R2
-n@s8_@box
-vSF
-R3
-R1
-!i10b 1
-!s100 EYz9?kMdeeHLP@R]nJ<RG0
-I7XbIeHP]=bTz[n7<HJC4[2
-S1
-R0
-R4
-R5
-R6
-!i122 0
-L0 52 6
-R7
-R8
-r1
-!s85 0
-31
-R9
-R10
-R11
-!i113 0
-R12
-R2
-n@s@f
 vstimulus
 R3
 R1
 !i10b 1
-!s100 6oFfTo=k0TQSNL0`W=KDY1
-I6mD:7l[03Qo7bn^QQCUhl2
+!s100 mdUBK:QDj1D9BX?J1@TT20
+IZWH<1Ck4K]fBaclT7aMOO3
 S1
 R0
-w1664367616
-8tb_des.sv
-Ftb_des.sv
+w1664455000
+8test_rca8.sv
+Ftest_rca8.sv
 !i122 0
-L0 2 65
-R7
-R8
+L0 1 123
+R4
+R5
 r1
 !s85 0
 31
-R9
-R10
-R11
+R6
+R7
+R8
 !i113 0
-R12
+R9
 R2
