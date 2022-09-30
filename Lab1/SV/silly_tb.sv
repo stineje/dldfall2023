@@ -9,8 +9,8 @@ module tb ();
    
   // instantiate device under test
    silly dut (a, b, c, y);
-
-   // 2 ns clock
+ ////////////////////////////////////////////////////////////////////
+   // 20 ns clock
    initial 
      begin	
 	clk = 1'b1;
