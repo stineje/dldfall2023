@@ -51,7 +51,6 @@ module stimulus;
 	 begin
 	    errors = errors + 1;
 	 end
-       $display("%h %h %b", result, ciphertext, (result == ciphertext));       
        $fdisplay(desc3, "%h %h %b || %h || %h %b", 
 		 plaintext, key, encrypt, ciphertext, result, (result == ciphertext));
        vectornum = vectornum + 1;
