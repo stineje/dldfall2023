@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.4)  24 AUG 2022 12:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.4)  25 OCT 2022 15:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -505,7 +505,7 @@ LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 9
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-<Tbird.png, id=36, 386.44376pt x 240.9pt>
+<Tbird.png, id=48, 386.44376pt x 240.9pt>
 File: Tbird.png Graphic file (type png)
 <use Tbird.png>
 Package pdftex.def Info: Tbird.png  used on input line 117.
@@ -514,7 +514,7 @@ Package pdftex.def Info: Tbird.png  used on input line 117.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<tbird_lights.png, id=40, 315.1775pt x 235.88126pt>
+<tbird_lights.png, id=52, 315.1775pt x 235.88126pt>
 File: tbird_lights.png Graphic file (type png)
 <use tbird_lights.png>
 Package pdftex.def Info: tbird_lights.png  used on input line 123.
@@ -531,18 +531,24 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 134
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
-] [2 <./Tbird.png> <./tbird_lights.png>] [3] (./lab3.bbl) 
+] [2 <./Tbird.png> <./tbird_lights.png>] [3]
+Overfull \hbox (5.03645pt too wide) in paragraph at lines 351--365
+\T1/cmr/m/n/10 team mem-bers should up-load the files and/or lab re-port. Pleas
+e con-tact James Stine (james.stine@okstate.edu)
+ []
+
+[4] (./lab3.bbl) 
 AED: lastpage setting LastPage
-[4] (./lab3.aux)
+[5] (./lab3.aux)
 Package rerunfilecheck Info: File `lab3.out' has not changed.
-(rerunfilecheck)             Checksum: 9B50A35D6DE9F3BF62454153C8921580;1063.
+(rerunfilecheck)             Checksum: 4018EA8F60607A395EBAEDB97887FF8D;1469.
  ) 
 Here is how much of TeX's memory you used:
- 11556 strings out of 478994
- 172887 string characters out of 5858185
- 481736 words of memory out of 5000000
- 28833 multiletter control sequences out of 15000+600000
- 412625 words of font info for 46 fonts, out of 8000000 for 9000
+ 11567 strings out of 478994
+ 172977 string characters out of 5858185
+ 481731 words of memory out of 5000000
+ 28835 multiletter control sequences out of 15000+600000
+ 411849 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  83i,14n,88p,351b,411s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
@@ -550,19 +556,18 @@ Here is how much of TeX's memory you used:
 /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
 usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
 r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/l
-ocal/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/loc
-al/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local
-/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/t
-exlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/tex
-live/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texli
-ve/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive
-/2021/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2
-021/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/202
-1/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on lab3.pdf (4 pages, 230050 bytes).
+ocal/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/loc
+al/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local
+/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/t
+exlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/tex
+live/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texli
+ve/2021/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive
+/2021/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2
+021/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on lab3.pdf (5 pages, 222617 bytes).
 PDF statistics:
- 140 PDF objects out of 1000 (max. 8388607)
- 114 compressed objects within 2 object streams
- 21 named destinations out of 1000 (max. 500000)
- 67 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 161 PDF objects out of 1000 (max. 8388607)
+ 135 compressed objects within 2 object streams
+ 31 named destinations out of 1000 (max. 500000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
