@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Nov  6 12:28:47 2022
+# Process ID: 163782
+# Current directory: /home/jstine/Xilinx/dldfall22proj/Vivado/Project/Project.runs/synth_1
+# Command line: vivado -log top_demo.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_demo.tcl
+# Log file: /home/jstine/Xilinx/dldfall22proj/Vivado/Project/Project.runs/synth_1/top_demo.vds
+# Journal file: /home/jstine/Xilinx/dldfall22proj/Vivado/Project/Project.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source top_demo.tcl -notrace
