@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../Demo2.srcs/sources_1/imports/vivado/digit2segments.sv" \
+"../../../../Demo2.srcs/sources_1/imports/vivado/segment_driver.sv" \
+"../../../../Demo2.srcs/sources_1/new/top_demo.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

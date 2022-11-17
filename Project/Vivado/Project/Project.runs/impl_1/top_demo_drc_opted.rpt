@@ -1,0 +1,62 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Fri Nov 11 14:44:13 2022
+| Host         : rerra-Precision-7865-Tower running 64-bit Ubuntu 22.04.1 LTS
+| Command      : report_drc -file top_demo_drc_opted.rpt -pb top_demo_drc_opted.pb -rpx top_demo_drc_opted.rpx
+| Design       : top_demo
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 3
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 2          |
+| ZPS7-1      | Warning  | PS7 block required                                          | 1          |
++-------------+----------+-------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT FSM_sequential_CURRENT_STATE[1]_i_3 is driving clock pin of 2 cells. This could lead to large hold time violations. Involved cells are:
+driver/FSM_sequential_CURRENT_STATE_reg[0]
+driver/FSM_sequential_CURRENT_STATE_reg[1]
+Related violations: <none>
+
+PLHOLDVIO-2#2 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT test/hdmi_pll/audio_sample_word_transfer_control_i_2 is driving clock pin of 8 cells. This could lead to large hold time violations. Involved cells are:
+test/hdmi/true_hdmi_output.packet_picker/audio_clock_regeneration_packet/clk_audio_counter_reg[0],
+test/hdmi/true_hdmi_output.packet_picker/audio_clock_regeneration_packet/clk_audio_counter_reg[1],
+test/hdmi/true_hdmi_output.packet_picker/audio_clock_regeneration_packet/clk_audio_counter_reg[2],
+test/hdmi/true_hdmi_output.packet_picker/audio_clock_regeneration_packet/clk_audio_counter_reg[3],
+test/hdmi/true_hdmi_output.packet_picker/audio_clock_regeneration_packet/clk_audio_counter_reg[4],
+test/hdmi/true_hdmi_output.packet_picker/audio_clock_regeneration_packet/clk_audio_counter_reg[5],
+test/hdmi/true_hdmi_output.packet_picker/audio_clock_regeneration_packet/internal_clk_audio_counter_wrap_reg
+test/hdmi/true_hdmi_output.packet_picker/audio_sample_word_transfer_control_reg
+Related violations: <none>
+
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+
