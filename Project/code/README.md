@@ -16,6 +16,7 @@ java life
 
 which should output some iterations dependent on the "gens" variable.
 
+<PRE>
 Generation 0:
 1011
 0011
@@ -36,3 +37,8 @@ Generation 3:
 1000
 1000
 1110
+</PRE>
+
+Note:  There is a C version here for those that like C, but it may be
+somewhat non-intuitive.  However, feel free to use the version you
+feel comfortable with.
