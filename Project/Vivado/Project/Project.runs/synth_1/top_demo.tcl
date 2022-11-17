@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/jstine/Xilinx/dldfall22proj/Vivado/Project/Project.runs/synth_1/top_demo.tcl"
+  variable script "/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/Project.runs/synth_1/top_demo.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,39 +70,44 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 12
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg484-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /home/jstine/Xilinx/dldfall22proj/Vivado/Project/Project.cache/wt [current_project]
-set_property parent.project_path /home/jstine/Xilinx/dldfall22proj/Vivado/Project/Project.xpr [current_project]
+set_property webtalk.parent_dir /home/rerra/Desktop/projnov10gitupdate/Project_under_construction/Project.cache/wt [current_project]
+set_property parent.project_path /home/rerra/Desktop/projnov10gitupdate/Project_under_construction/Project.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo /home/jstine/Xilinx/dldfall22proj/Vivado/Project/Project.cache/ip [current_project]
+set_property ip_output_repo /home/rerra/Downloads/dldfall22proj/Project_under_construction/Project.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
-  /home/jstine/Downloads/hdmi_working/attributemap.sv
-  /home/jstine/Downloads/hdmi_working/audio_clock_regeneration_packet.sv
-  /home/jstine/Downloads/hdmi_working/audio_info_frame.sv
-  /home/jstine/Downloads/hdmi_working/audio_sample_packet.sv
-  /home/jstine/Downloads/hdmi_working/auxiliary_video_information_info_frame.sv
-  /home/jstine/Downloads/hdmi_working/console.sv
-  /home/jstine/Xilinx/dldfall22proj/Vivado/Project/Project.srcs/sources_1/imports/vivado/digit2segments.sv
-  /home/jstine/Downloads/hdmi_working/glyphmap.sv
-  /home/jstine/Downloads/hdmi_working/hdmi.sv
-  /home/jstine/Downloads/hdmi_working/hdmi_top.sv
-  /home/jstine/Downloads/hdmi_working/packet_assembler.sv
-  /home/jstine/Downloads/hdmi_working/packet_picker.sv
-  /home/jstine/Downloads/hdmi_working/pll.sv
-  /home/jstine/Xilinx/dldfall22proj/Vivado/Project/Project.srcs/sources_1/imports/vivado/segment_driver.sv
-  /home/jstine/Downloads/hdmi_working/serializer.sv
-  /home/jstine/Downloads/hdmi_working/source_product_description_info_frame.sv
-  /home/jstine/Downloads/hdmi_working/tmds_channel.sv
-  /home/jstine/Xilinx/dldfall22proj/Vivado/Project/Project.srcs/sources_1/new/top_demo.sv
+  /home/rerra/Desktop/dldfall22proj/SV/all.sv
+  /home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/audio_clock_regeneration_packet.sv
+  /home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/audio_info_frame.sv
+  /home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/audio_sample_packet.sv
+  /home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/auxiliary_video_information_info_frame.sv
+  /home/rerra/Downloads/dldfall2022-main/Lab3/SV/clk_div.sv
+  /home/rerra/Desktop/dldfall22proj/SV/datapath.sv
+  /home/rerra/Desktop/projnov10gitupdate/Project_under_construction/Project.srcs/sources_1/imports/vivado/digit2segments.sv
+  /home/rerra/Desktop/dldfall22proj/SV/fsm.sv
+  /home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/hdmi.sv
+  /home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/hdmi_top.sv
+  /home/rerra/Desktop/dldfall22proj/SV/mux.sv
+  /home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/packet_assembler.sv
+  /home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/packet_picker.sv
+  /home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/pll.sv
+  /home/rerra/Desktop/dldfall22proj/SV/register.sv
+  /home/rerra/Desktop/projnov10gitupdate/Project_under_construction/Project.srcs/sources_1/imports/vivado/segment_driver.sv
+  /home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/serializer.sv
+  /home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/source_product_description_info_frame.sv
+  /home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/tmds_channel.sv
+  /home/rerra/Desktop/projnov10gitupdate/Project_under_construction/Project.srcs/sources_1/new/top_demo.sv
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -113,8 +118,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/jstine/Xilinx/dldfall22proj/Vivado/Project/Project.srcs/constrs_1/new/constr.xdc
-set_property used_in_implementation false [get_files /home/jstine/Xilinx/dldfall22proj/Vivado/Project/Project.srcs/constrs_1/new/constr.xdc]
+read_xdc /home/rerra/Desktop/projnov10gitupdate/Project_under_construction/Project.srcs/constrs_1/new/constr.xdc
+set_property used_in_implementation false [get_files /home/rerra/Desktop/projnov10gitupdate/Project_under_construction/Project.srcs/constrs_1/new/constr.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

@@ -53,13 +53,13 @@ module top_demo
   logic [16:0] CURRENT_COUNT;
   logic [16:0] NEXT_COUNT;
   logic        smol_clk;
-  
+   
   // Place Conway Game of Life instantiation here
-  
+ 
   // HDMI
-  logic hdmi_out_en;
-  assign hdmi_out_en = 1'b0;
-  hdmi_top test (sysclk_125mhz, hdmi_d_p, hdmi_d_n, hdmi_clk_p, 
+  // logic hdmi_out_en;
+  //assign hdmi_out_en = 1'b0;
+  hdmi_top test (n2, sysclk_125mhz, hdmi_d_p, hdmi_d_n, hdmi_clk_p, 
 		         hdmi_clk_n, hdmi_cec, hdmi_sda, hdmi_scl, hdmi_hpd);
   
   // 7-segment display
