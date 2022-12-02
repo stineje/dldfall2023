@@ -17,6 +17,13 @@ module tb ();
 	forever #10 clk = ~clk;
      end
 
+   // 20 ns clock
+   initial 
+     begin	
+	a = 8'h0;
+	forever #15 a = $random;
+     end
+
    initial
      begin
 	#0  reset = 1'b1;
