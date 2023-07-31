@@ -28,6 +28,6 @@ Instruments.  More information about the board can be found here:
 https://www.ni.com/docs/en-US/bundle/digital-systems-development-specs/resource/376641b.pdf
 and in this repository.
 
-The DSDB device was designed by Xilinx, but manufactured by a company
+The DSDB device was designed by AMD/Xilinx, but manufactured by a company
 called Digilent.  There is some other information availble at
 Digilent's <a href="https://digilent.com/reference/dsdb/dsdb">here</a>.
