@@ -1,21 +1,21 @@
 DLD Fall 2022
 
 Lab 0
-Assigned: 8/22
-Due: 9/16
+Assigned: 8/21
+Due: 9/11
 
 Lab 1
-Assigned: 9/12
-Due: 9/30
+Assigned: X/XX
+Due: X/XX
 
 Lab 2
-Assigned: 9/26
-Due: 10/21
+Assigned: X/XX
+Due: X/XX
 
 Lab 3
-Assigned 10/17
-Due: 11/04
+Assigned X/XX
+Due: X/XX
 
 Project
-Assigned: 10/31
-Due: 12/09
+Assigned: X/XX
+Due: X/XX
