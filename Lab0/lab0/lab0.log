@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.19)  9 AUG 2023 11:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.19)  14 AUG 2023 14:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -428,24 +428,24 @@ File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 (./lab0.aux)
 \openout1 = `lab0.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
 
 (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -461,7 +461,7 @@ LaTeX Font Info:    ... okay on input line 38.
 \makeMPintoPDFobject=\count299
 \everyMPtoPDFconversion=\toks33
 )
-Package hyperref Info: Link coloring OFF on input line 38.
+Package hyperref Info: Link coloring OFF on input line 37.
  (./lab0.out) (./lab0.out)
 \@outlinefile=\write4
 \openout4 = `lab0.out'.
@@ -504,17 +504,17 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-21.
+20.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 127
+LaTeX Font Info:    Trying to load font information for U+msa on input line 126
 .
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 127
+LaTeX Font Info:    Trying to load font information for U+msb on input line 126
 .
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -526,13 +526,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <dsdb1.png, id=94, 824.07875pt x 1076.02pt>
 File: dsdb1.png Graphic file (type png)
 <use dsdb1.png>
-Package pdftex.def Info: dsdb1.png  used on input line 297.
+Package pdftex.def Info: dsdb1.png  used on input line 296.
 (pdftex.def)             Requested size: 412.03836pt x 538.0087pt.
  [3]
 <top_demo.png, id=109, 1702.36pt x 1163.34625pt>
 File: top_demo.png Graphic file (type png)
 <use top_demo.png>
-Package pdftex.def Info: top_demo.png  used on input line 419.
+Package pdftex.def Info: top_demo.png  used on input line 418.
 (pdftex.def)             Requested size: 340.46597pt x 232.66513pt.
 \openout3 = `lab0-1.cpt'.
 
@@ -540,7 +540,7 @@ Package pdftex.def Info: top_demo.png  used on input line 419.
 <Utilization.png, id=137, 1573.88pt x 1091.07625pt>
 File: Utilization.png Graphic file (type png)
 <use Utilization.png>
-Package pdftex.def Info: Utilization.png  used on input line 512.
+Package pdftex.def Info: Utilization.png  used on input line 511.
 (pdftex.def)             Requested size: 314.77043pt x 218.21138pt.
  [7 <./Utilization.png>] (./lab0.bbl) [8] 
 enddocument/afterlastpage: lastpage setting LastPage.
@@ -549,10 +549,10 @@ Package rerunfilecheck Info: File `lab0.out' has not changed.
 (rerunfilecheck)             Checksum: 0E810F17DB0B0F81128B1977AA5E266C;1984.
  ) 
 Here is how much of TeX's memory you used:
- 12507 strings out of 476025
- 202294 string characters out of 5790017
+ 12506 strings out of 476025
+ 202279 string characters out of 5790017
  1868388 words of memory out of 5000000
- 32726 multiletter control sequences out of 15000+600000
+ 32725 multiletter control sequences out of 15000+600000
  521147 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,14n,76p,300b,655s stack positions out of 10000i,1000n,20000p,200000b,200000s
