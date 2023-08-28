@@ -27,4 +27,8 @@ S.~Harris and D.~Harris, \emph{Digital Design and Computer Architecture: RISC-V
   Edition}, 1st~ed.\hskip 1em plus 0.5em minus 0.4em\relax San Francisco, CA,
   USA: Morgan Kaufmann Publishers Inc., 2021.
 
+\bibitem{1453497}
+R.~Kenney and M.~Schulte, ``High-speed multioperand decimal adders,''
+  \emph{IEEE Transactions on Computers}, vol.~54, no.~8, pp. 953--963, 2005.
+
 \end{thebibliography}
