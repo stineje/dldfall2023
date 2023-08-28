@@ -172,8 +172,8 @@ design is called the device under test (DUT) or circuit under test
 (CUT).  This can be represented visually as shown in Figure~\ref{tb.fig}
 \begin{figure}
   \centering
-  \includegraphics[scale=0.5]{tb.png}
-  \caption{The Test Bench Structure}
+  \includegraphics[scale=0.6]{tb.png}
+  \caption{The TestBench Structure}
   \label{tb.fig}
 \end{figure}
 
@@ -325,9 +325,9 @@ used for simple implementations and, more importantly, in courses
 where time is of the essence.
 \begin{figure} [tb]
 \begin{center}
-\includegraphics[scale=1.5]{f05-05-9780128000564.eps}
+\includegraphics[scale=1.75]{f05-05-9780128000564.eps}
 \end{center}
-\caption{Generalized Ripple-Carry Adder (RCA) Implementation~\cite{ddca-riscv}.}
+\caption{$32$-bit Ripple-Carry Adder (RCA) Implementation from our Text~\cite{ddca-riscv}.}
 \label{rca.fig}
 \end{figure}
 
@@ -481,10 +481,13 @@ The following are items will be needed to complete this laboratory:
     \item Create a testbench from the \verb!silly_tb.sv! testbench from
       Lab 0 to test your RCA.  
     \item Integrate a self-validating structure into your testbench so
-      that it checks the answer automatically.  Test, at least, $150$
+      that it checks the answer automatically.  Test, at least, $175$
       different vectors and demonstrate that the sum is indeed
       correct.  That way, it
-      should be easy to see if a signal is asserted when an error occurs.
+      should be easy to see if a signal is asserted when an error
+      occurs.
+      It should also be relatively easy to test all vectors and
+      relax knowing that you have exhausitively verified your design too.
     \item Once your RCA works, implement your design on the RCA
       using the demo program from \verb!Lab1.zip!.  Your design should
       display the input operands (i.e., $A$ and $B$) and the final

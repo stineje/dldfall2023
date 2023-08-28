@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.19)  28 AUG 2023 10:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.19)  28 AUG 2023 11:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -528,7 +528,7 @@ File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 File: tb.png Graphic file (type png)
 <use tb.png>
 Package pdftex.def Info: tb.png  used on input line 175.
-(pdftex.def)             Requested size: 238.39003pt x 75.78293pt.
+(pdftex.def)             Requested size: 286.07095pt x 90.94044pt.
  [2 <./tb.png>]
 Package epstopdf Info: Source file: <f05-05-9780128000564.eps>
 (epstopdf)                    date: 2023-08-28 10:44:45
@@ -546,7 +546,7 @@ File: f05-05-9780128000564-eps-converted-to.pdf Graphic file (type pdf)
 <use f05-05-9780128000564-eps-converted-to.pdf>
 Package pdftex.def Info: f05-05-9780128000564-eps-converted-to.pdf  used on inp
 ut line 328.
-(pdftex.def)             Requested size: 352.31538pt x 73.7754pt.
+(pdftex.def)             Requested size: 411.0346pt x 86.0713pt.
  [3]
 [4]
 \openout3 = `lab1-1.cpt'.
@@ -586,7 +586,7 @@ ve/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive
 3/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2023/
 texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/2023/te
 xmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on lab1.pdf (7 pages, 319674 bytes).
+Output written on lab1.pdf (7 pages, 320044 bytes).
 PDF statistics:
  236 PDF objects out of 1000 (max. 8388607)
  186 compressed objects within 2 object streams
