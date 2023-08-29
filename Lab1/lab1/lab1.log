@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.19)  29 AUG 2023 08:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.19)  29 AUG 2023 18:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -524,11 +524,11 @@ File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 /local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 
 ]
-<Testbench.png, id=71, 484.43484pt x 139.64671pt>
+<Testbench.png, id=71, 276.6586pt x 139.64671pt>
 File: Testbench.png Graphic file (type png)
 <use Testbench.png>
 Package pdftex.def Info: Testbench.png  used on input line 175.
-(pdftex.def)             Requested size: 339.10207pt x 97.75201pt.
+(pdftex.def)             Requested size: 248.99043pt x 125.68086pt.
  [2 <./Testbench.png>]
 Package epstopdf Info: Source file: <f05-05-9780128000564.eps>
 (epstopdf)                    date: 2023-08-28 10:44:45
@@ -586,7 +586,7 @@ ve/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive
 3/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2023/
 texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/2023/te
 xmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on lab1.pdf (7 pages, 329475 bytes).
+Output written on lab1.pdf (7 pages, 330026 bytes).
 PDF statistics:
  235 PDF objects out of 1000 (max. 8388607)
  186 compressed objects within 2 object streams
