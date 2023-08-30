@@ -21,7 +21,7 @@ module tb ();
    initial
      begin
     
-	#0   a = $random;	
+	#20  a = $random;	
 	#0   b = $random;	
 	#0   c = $random;
 
