@@ -5,8 +5,8 @@ Assigned: 8/21
 Due: 9/11
 
 Lab 1
-Assigned: X/XX
-Due: X/XX
+Assigned: 9/11
+Due: 9/25
 
 Lab 2
 Assigned: X/XX
