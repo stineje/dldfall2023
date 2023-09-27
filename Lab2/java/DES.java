@@ -310,7 +310,7 @@ class DES {
 	// Example 2
 	String plaintext = "2579db866c0f528c";
 	String key = "433e4529462a4a62";
-	String IV = "0000000000000001";
+	String IV = "0000000000000000";
 	// Example 3
 	//String plaintext = "ed7bc587a26f8c67";
 	//String key = "3b3898371520f75e";
