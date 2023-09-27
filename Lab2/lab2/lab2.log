@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.19)  27 SEP 2023 13:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.19)  27 SEP 2023 14:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -658,7 +658,7 @@ dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2023/texmf-di
 st/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2023/texmf-dist
 /fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2023/texmf-dist/f
 onts/type1/public/cm-super/sftt1000.pfb>
-Output written on lab2.pdf (15 pages, 722213 bytes).
+Output written on lab2.pdf (15 pages, 720851 bytes).
 PDF statistics:
  411 PDF objects out of 1000 (max. 8388607)
  337 compressed objects within 4 object streams
