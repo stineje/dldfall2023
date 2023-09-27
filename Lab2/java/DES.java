@@ -244,8 +244,6 @@ class DES {
 
 	    // xor 2 strings if IV \neq 0; otherwise proceed normally
 	    xorplainText = xor(plainText, IV);
-	    //System.out.println("Original plain Text:\t" + plainText.toUpperCase());
-	    //System.out.println("Modified plain Text:\t" + xorplainText.toUpperCase());
             // initial permutation
             plainText = permutation (IP, xorplainText);
             System.out.println(
@@ -275,7 +273,9 @@ class DES {
             int i;
             // get round keys
             String keys[] = getKeys (key);
- 
+	    // modify plainText
+	    String xorplainText = "";	    
+
             // initial permutation
             plainText = permutation (IP, plainText);
             System.out.println(
@@ -296,8 +296,9 @@ class DES {
             plainText = plainText.substring(8, 16)
                         + plainText.substring(0, 8);
             plainText = permutation (IP1, plainText);
-            plainText = Xor(plainText, IV)
-            return plainText;
+	    // xor 2 strings if IV \neq 0; otherwise proceed normally
+	    xorplainText = xor(plainText, IV);	    	    
+            return xorplainText;
         }
     }
 
@@ -309,7 +310,7 @@ class DES {
 	// Example 2
 	String plaintext = "2579db866c0f528c";
 	String key = "433e4529462a4a62";
-	String IV = "0000000000000000";
+	String IV = "0000000000000001";
 	// Example 3
 	//String plaintext = "ed7bc587a26f8c67";
 	//String key = "3b3898371520f75e";
