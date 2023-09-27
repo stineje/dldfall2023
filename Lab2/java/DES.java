@@ -271,7 +271,7 @@ class DES {
             return plainText;
         }
  
-        String decrypt (String plainText, String key) {
+        String decrypt (String plainText, String key, String IV) {
             int i;
             // get round keys
             String keys[] = getKeys (key);
@@ -296,6 +296,7 @@ class DES {
             plainText = plainText.substring(8, 16)
                         + plainText.substring(0, 8);
             plainText = permutation (IP1, plainText);
+            plainText = Xor(plainText, IV)
             return plainText;
         }
     }
@@ -335,7 +336,7 @@ class DES {
         System.out.println(
             "\nCipher Text: " + ciphertext.toUpperCase() + "\n");
         System.out.println("Decryption\n");
-        decryptedPlaintext = cipher.decrypt(ciphertext, key);
+        decryptedPlaintext = cipher.decrypt(ciphertext, key, IV);
         System.out.println(
             "\nPlain Text: "
             + decryptedPlaintext.toUpperCase());
