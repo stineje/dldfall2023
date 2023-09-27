@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.19)  27 SEP 2023 13:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.19)  27 SEP 2023 13:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -584,16 +584,16 @@ File: des.png Graphic file (type png)
 Package pdftex.def Info: des.png  used on input line 580.
 (pdftex.def)             Requested size: 143.86148pt x 144.12495pt.
  [7 <./des-round.png>]
-<overall-block.png, id=214, 361.35pt x 216.81pt>
+<overall-block.png, id=214, 309.02953pt x 578.5364pt>
 File: overall-block.png Graphic file (type png)
 <use overall-block.png>
 Package pdftex.def Info: overall-block.png  used on input line 625.
-(pdftex.def)             Requested size: 180.67456pt x 108.40472pt.
+(pdftex.def)             Requested size: 154.51437pt x 289.26749pt.
  [8 <./des.png>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 653.
  [9 <./overall-block.png>]
-<analysis.png, id=236, 2095.83pt x 445.665pt>
+<analysis.png, id=235, 2095.83pt x 445.665pt>
 File: analysis.png Graphic file (type png)
 <use analysis.png>
 Package pdftex.def Info: analysis.png  used on input line 725.
@@ -604,20 +604,20 @@ File: modelsim.png Graphic file (type png)
 <use modelsim.png>
 Package pdftex.def Info: modelsim.png  used on input line 914.
 (pdftex.def)             Requested size: 431.21432pt x 238.79396pt.
- [13 <./modelsim.png>]
-<modelsim-tips1.png, id=287, 589.70313pt x 507.8975pt>
+ [13{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.e
+nc} <./modelsim.png>]
+<modelsim-tips1.png, id=288, 589.70313pt x 507.8975pt>
 File: modelsim-tips1.png Graphic file (type png)
 <use modelsim-tips1.png>
 Package pdftex.def Info: modelsim-tips1.png  used on input line 981.
 (pdftex.def)             Requested size: 235.87706pt x 203.1554pt.
-<modelsim-tips2.png, id=288, 1290.32062pt x 122.95938pt>
+<modelsim-tips2.png, id=289, 1290.32062pt x 122.95938pt>
 File: modelsim-tips2.png Graphic file (type png)
 <use modelsim-tips2.png>
 Package pdftex.def Info: modelsim-tips2.png  used on input line 987.
 (pdftex.def)             Requested size: 412.91104pt x 39.3478pt.
- [14{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.e
-nc} <./modelsim-tips1.png>] (./lab2.bbl) [15 <./modelsim-tips2.png>]
-
+ [14 <./modelsim-tips1.png> <./modelsim-tips2.png>] (./lab2.bbl)
+[15] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./lab2.aux)
 Package rerunfilecheck Info: File `lab2.out' has not changed.
@@ -630,7 +630,7 @@ Here is how much of TeX's memory you used:
  33272 multiletter control sequences out of 15000+600000
  527191 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,14n,76p,386b,520s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,14n,76p,386b,544s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 , replaced by a fixed one
@@ -658,7 +658,7 @@ dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2023/texmf-di
 st/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2023/texmf-dist
 /fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2023/texmf-dist/f
 onts/type1/public/cm-super/sftt1000.pfb>
-Output written on lab2.pdf (15 pages, 693841 bytes).
+Output written on lab2.pdf (15 pages, 722213 bytes).
 PDF statistics:
  411 PDF objects out of 1000 (max. 8388607)
  337 compressed objects within 4 object streams
