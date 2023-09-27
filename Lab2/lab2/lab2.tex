@@ -617,6 +617,16 @@ Iniatialization Vector (IV) right in the beginning of the process.
   Plaintext_{new} & = & IV \oplus Plaintext_{input}
 \end{eqnarray*}
 
+The key to this is that the IV must be processed in the beginning
+during encryption and towards the end in decryption.  You can see get
+the idea visually in Figure~\ref{overview-block.png}.
+\begin{figure} [t!]
+  \centering
+  \includegraphics[scale=0.5]{overall-block.png}
+  \caption{Encryption/Decrypption Overall Block Diagram}
+  \label{overview-block.png}
+\end{figure}
+
 
 \subsection{Encryption or Decryption}
 
@@ -712,7 +722,7 @@ re-run the implementation to get the report.  Clicking on the option
 gets you specific report which you can save.
 \begin{figure} [t!]
   \centering
-  \includegraphics[scale=0.3]{analysis.png}
+  \includegraphics[scale=0.3, width=\columnwidth]{analysis.png}
   \caption{Reports Window within Xilinx Vivado}
   \label{reports1.png}
 \end{figure}
