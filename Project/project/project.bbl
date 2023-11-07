@@ -1,0 +1,20 @@
+\begin{thebibliography}{1}
+
+\bibitem{games1970fantastic}
+Martin Gardner,
+\newblock ``The fantastic combinations of john conway’s new solitaire game
+  “life”,''
+\newblock {\em Scientific American}, vol. 223, pp. 120--123, 1970.
+
+\bibitem{CleveMolerLife}
+``Cleve's corner: Revisiting the game of life,''
+  \url{https://blogs.mathworks.com/cleve/2018/11/08/revisiting-the-game-of-life/#f8ed4bb9-8421-4ffd-90f0-f2e1b3f7fd29},
+\newblock Accessed: 2022-11-03.
+
+\bibitem{ddca-riscv}
+Sarah Harris and David Harris,
+\newblock {\em Digital Design and Computer Architecture: RISC-V Edition},
+\newblock Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 1st edition,
+  2021.
+
+\end{thebibliography}

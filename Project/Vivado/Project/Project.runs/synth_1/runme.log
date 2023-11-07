@@ -1,0 +1,567 @@
+
+*** Running vivado
+    with args -log top_demo.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_demo.tcl
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source top_demo.tcl -notrace
+Command: synth_design -top top_demo -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1306235
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2371.836 ; gain = 0.000 ; free physical = 97687 ; free virtual = 122481
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_demo' [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/Project.srcs/sources_1/new/top_demo.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'clk_div' [/home/rerra/Downloads/dldfall2022-main/Lab3/SV/clk_div.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'clk_div' (1#1) [/home/rerra/Downloads/dldfall2022-main/Lab3/SV/clk_div.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'all' [/home/rerra/Desktop/dldfall22proj/SV/all.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'fsm' [/home/rerra/Desktop/dldfall22proj/SV/fsm.sv:1]
+	Parameter S0 bound to: 1'b0 
+	Parameter S1 bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'fsm' (2#1) [/home/rerra/Desktop/dldfall22proj/SV/fsm.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'mux' [/home/rerra/Desktop/dldfall22proj/SV/mux.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux' (3#1) [/home/rerra/Desktop/dldfall22proj/SV/mux.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'datapath' [/home/rerra/Desktop/dldfall22proj/SV/datapath.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'evolve3' [/home/rerra/Desktop/dldfall22proj/SV/datapath.sv:88]
+INFO: [Synth 8-6157] synthesizing module 'rules' [/home/rerra/Desktop/dldfall22proj/SV/datapath.sv:147]
+INFO: [Synth 8-6155] done synthesizing module 'rules' (4#1) [/home/rerra/Desktop/dldfall22proj/SV/datapath.sv:147]
+INFO: [Synth 8-6155] done synthesizing module 'evolve3' (5#1) [/home/rerra/Desktop/dldfall22proj/SV/datapath.sv:88]
+INFO: [Synth 8-6157] synthesizing module 'evolve5' [/home/rerra/Desktop/dldfall22proj/SV/datapath.sv:103]
+INFO: [Synth 8-6155] done synthesizing module 'evolve5' (6#1) [/home/rerra/Desktop/dldfall22proj/SV/datapath.sv:103]
+INFO: [Synth 8-6157] synthesizing module 'evolve8' [/home/rerra/Desktop/dldfall22proj/SV/datapath.sv:122]
+INFO: [Synth 8-6155] done synthesizing module 'evolve8' (7#1) [/home/rerra/Desktop/dldfall22proj/SV/datapath.sv:122]
+INFO: [Synth 8-6155] done synthesizing module 'datapath' (8#1) [/home/rerra/Desktop/dldfall22proj/SV/datapath.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'register' [/home/rerra/Desktop/dldfall22proj/SV/register.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'register' (9#1) [/home/rerra/Desktop/dldfall22proj/SV/register.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'all' (10#1) [/home/rerra/Desktop/dldfall22proj/SV/all.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_top' [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/hdmi_top.sv:1]
+	Parameter AUDIO_BIT_WIDTH bound to: 16 - type: integer 
+	Parameter AUDIO_RATE bound to: 48000 - type: integer 
+	Parameter WAVE_RATE bound to: 480 - type: integer 
+	Parameter SKIP bound to: 10 - type: integer 
+	Parameter SEGMENT bound to: 50 - type: integer 
+	Parameter START bound to: 270 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [/tools/Xilinx2/Vivado/2020.2/scripts/rt/data/unisim_comp.v:46332]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (11#1) [/tools/Xilinx2/Vivado/2020.2/scripts/rt/data/unisim_comp.v:46332]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_pll_xilinx' [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/pll.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [/tools/Xilinx2/Vivado/2020.2/scripts/rt/data/unisim_comp.v:39998]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 37.125000 - type: double 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: double 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 10.000000 - type: double 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 2 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT5_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 5 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: double 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: double 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (12#1) [/tools/Xilinx2/Vivado/2020.2/scripts/rt/data/unisim_comp.v:39998]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/tools/Xilinx2/Vivado/2020.2/scripts/rt/data/unisim_comp.v:1083]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (13#1) [/tools/Xilinx2/Vivado/2020.2/scripts/rt/data/unisim_comp.v:1083]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_pll_xilinx' (14#1) [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/pll.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'hdmi' [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/hdmi.sv:4]
+	Parameter VIDEO_ID_CODE bound to: 32'sb00000000000000000000000000000100 
+	Parameter IT_CONTENT bound to: 1'b1 
+	Parameter BIT_WIDTH bound to: 32'sb00000000000000000000000000001011 
+	Parameter BIT_HEIGHT bound to: 32'sb00000000000000000000000000001010 
+	Parameter DVI_OUTPUT bound to: 1'b0 
+	Parameter VIDEO_REFRESH_RATE bound to: 60.000000 - type: double 
+	Parameter AUDIO_RATE bound to: 48000 - type: integer 
+	Parameter AUDIO_BIT_WIDTH bound to: 16 - type: integer 
+	Parameter VENDOR_NAME bound to: 64'b0101010101101110011010110110111001101111011101110110111000000000 
+	Parameter PRODUCT_DESCRIPTION bound to: 128'b01000110010100000100011101000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter SOURCE_DEVICE_INFORMATION bound to: 8'b00000000 
+	Parameter START_X bound to: 32'sb00000000000000000000000000000000 
+	Parameter START_Y bound to: 32'sb00000000000000000000000000000000 
+	Parameter NUM_CHANNELS bound to: 32'sb00000000000000000000000000000011 
+	Parameter VIDEO_RATE bound to: 74250000.000000 - type: double 
+INFO: [Synth 8-6157] synthesizing module 'packet_picker' [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/packet_picker.sv:4]
+	Parameter VIDEO_ID_CODE bound to: 32'sb00000000000000000000000000000100 
+	Parameter VIDEO_RATE bound to: 74250000.000000 - type: double 
+	Parameter IT_CONTENT bound to: 1'b1 
+	Parameter AUDIO_BIT_WIDTH bound to: 16 - type: integer 
+	Parameter AUDIO_RATE bound to: 48000 - type: integer 
+	Parameter VENDOR_NAME bound to: 64'b0101010101101110011010110110111001101111011101110110111000000000 
+	Parameter PRODUCT_DESCRIPTION bound to: 128'b01000110010100000100011101000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter SOURCE_DEVICE_INFORMATION bound to: 8'b00000000 
+	Parameter SAMPLING_FREQUENCY bound to: 4'b0010 
+	Parameter AUDIO_BIT_WIDTH_COMPARATOR bound to: 32'sb00000000000000000000000000010100 
+	Parameter WORD_LENGTH bound to: 3'b100 
+	Parameter WORD_LENGTH_LIMIT bound to: 1'b0 
+INFO: [Synth 8-6157] synthesizing module 'audio_clock_regeneration_packet' [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/audio_clock_regeneration_packet.sv:5]
+	Parameter VIDEO_RATE bound to: 74250000.000000 - type: double 
+	Parameter AUDIO_RATE bound to: 48000 - type: integer 
+	Parameter N bound to: 20'b00000001100000000000 
+	Parameter CLK_AUDIO_COUNTER_WIDTH bound to: 32'sb00000000000000000000000000000110 
+	Parameter CLK_AUDIO_COUNTER_END bound to: 6'b101111 
+	Parameter CYCLE_TIME_STAMP_COUNTER_IDEAL bound to: 20'b00010010001000001010 
+	Parameter CYCLE_TIME_STAMP_COUNTER_WIDTH bound to: 32'sb00000000000000000000000000010001 
+INFO: [Synth 8-6155] done synthesizing module 'audio_clock_regeneration_packet' (15#1) [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/audio_clock_regeneration_packet.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'audio_sample_packet' [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/audio_sample_packet.sv:8]
+	Parameter GRADE bound to: 1'b0 
+	Parameter SAMPLE_WORD_TYPE bound to: 1'b0 
+	Parameter COPYRIGHT_NOT_ASSERTED bound to: 1'b1 
+	Parameter PRE_EMPHASIS bound to: 3'b000 
+	Parameter MODE bound to: 2'b00 
+	Parameter CATEGORY_CODE bound to: 8'b00000000 
+	Parameter SOURCE_NUMBER bound to: 4'b0000 
+	Parameter SAMPLING_FREQUENCY bound to: 4'b0010 
+	Parameter CLOCK_ACCURACY bound to: 2'b00 
+	Parameter WORD_LENGTH bound to: 4'b0010 
+	Parameter ORIGINAL_SAMPLING_FREQUENCY bound to: 4'b0000 
+	Parameter LAYOUT bound to: 1'b0 
+	Parameter CHANNEL_STATUS_LENGTH bound to: 8'b11000000 
+INFO: [Synth 8-6155] done synthesizing module 'audio_sample_packet' (16#1) [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/audio_sample_packet.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'auxiliary_video_information_info_frame' [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/auxiliary_video_information_info_frame.sv:5]
+	Parameter VIDEO_FORMAT bound to: 2'b00 
+	Parameter ACTIVE_FORMAT_INFO_PRESENT bound to: 1'b0 
+	Parameter BAR_INFO bound to: 2'b00 
+	Parameter SCAN_INFO bound to: 2'b00 
+	Parameter COLORIMETRY bound to: 2'b00 
+	Parameter PICTURE_ASPECT_RATIO bound to: 2'b00 
+	Parameter ACTIVE_FORMAT_ASPECT_RATIO bound to: 4'b1000 
+	Parameter IT_CONTENT bound to: 1'b1 
+	Parameter EXTENDED_COLORIMETRY bound to: 3'b000 
+	Parameter RGB_QUANTIZATION_RANGE bound to: 2'b00 
+	Parameter NON_UNIFORM_PICTURE_SCALING bound to: 2'b00 
+	Parameter VIDEO_ID_CODE bound to: 32'sb00000000000000000000000000000100 
+	Parameter YCC_QUANTIZATION_RANGE bound to: 2'b00 
+	Parameter CONTENT_TYPE bound to: 2'b00 
+	Parameter PIXEL_REPETITION bound to: 4'b0000 
+	Parameter LENGTH bound to: 5'b01101 
+	Parameter VERSION bound to: 8'b00000010 
+	Parameter TYPE bound to: 7'b0000010 
+INFO: [Synth 8-6155] done synthesizing module 'auxiliary_video_information_info_frame' (17#1) [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/auxiliary_video_information_info_frame.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'source_product_description_info_frame' [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/source_product_description_info_frame.sv:5]
+	Parameter VENDOR_NAME bound to: 64'b0101010101101110011010110110111001101111011101110110111000000000 
+	Parameter PRODUCT_DESCRIPTION bound to: 128'b01000110010100000100011101000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter SOURCE_DEVICE_INFORMATION bound to: 8'b00000000 
+	Parameter LENGTH bound to: 5'b11001 
+	Parameter VERSION bound to: 8'b00000001 
+	Parameter TYPE bound to: 7'b0000011 
+INFO: [Synth 8-6155] done synthesizing module 'source_product_description_info_frame' (18#1) [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/source_product_description_info_frame.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'audio_info_frame' [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/audio_info_frame.sv:5]
+	Parameter AUDIO_CHANNEL_COUNT bound to: 3'b001 
+	Parameter CHANNEL_ALLOCATION bound to: 8'b00000000 
+	Parameter DOWN_MIX_INHIBITED bound to: 1'b0 
+	Parameter LEVEL_SHIFT_VALUE bound to: 4'b0000 
+	Parameter LOW_FREQUENCY_EFFECTS_PLAYBACK_LEVEL bound to: 2'b00 
+	Parameter AUDIO_CODING_TYPE bound to: 4'b0000 
+	Parameter SAMPLING_FREQUENCY bound to: 3'b000 
+	Parameter SAMPLE_SIZE bound to: 2'b00 
+	Parameter LENGTH bound to: 5'b01010 
+	Parameter VERSION bound to: 8'b00000001 
+	Parameter TYPE bound to: 7'b0000100 
+INFO: [Synth 8-6155] done synthesizing module 'audio_info_frame' (19#1) [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/audio_info_frame.sv:5]
+INFO: [Synth 8-6155] done synthesizing module 'packet_picker' (20#1) [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/packet_picker.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'packet_assembler' [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/packet_assembler.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'packet_assembler' (21#1) [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/packet_assembler.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'tmds_channel' [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/tmds_channel.sv:4]
+	Parameter CN bound to: 32'sb00000000000000000000000000000000 
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/tmds_channel.sv:104]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/tmds_channel.sv:116]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/tmds_channel.sv:160]
+INFO: [Synth 8-6155] done synthesizing module 'tmds_channel' (22#1) [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/tmds_channel.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'tmds_channel__parameterized0' [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/tmds_channel.sv:4]
+	Parameter CN bound to: 32'sb00000000000000000000000000000001 
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/tmds_channel.sv:104]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/tmds_channel.sv:116]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/tmds_channel.sv:160]
+INFO: [Synth 8-6155] done synthesizing module 'tmds_channel__parameterized0' (22#1) [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/tmds_channel.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'tmds_channel__parameterized1' [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/tmds_channel.sv:4]
+	Parameter CN bound to: 32'sb00000000000000000000000000000010 
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/tmds_channel.sv:104]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/tmds_channel.sv:116]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/tmds_channel.sv:160]
+INFO: [Synth 8-6155] done synthesizing module 'tmds_channel__parameterized1' (22#1) [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/tmds_channel.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'serializer' [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/serializer.sv:1]
+	Parameter NUM_CHANNELS bound to: 32'sb00000000000000000000000000000011 
+	Parameter VIDEO_RATE bound to: 74250000.000000 - type: double 
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE2' [/tools/Xilinx2/Vivado/2020.2/scripts/rt/data/unisim_comp.v:50398]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_OQ bound to: 1'b0 
+	Parameter INIT_TQ bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter IS_D3_INVERTED bound to: 1'b0 
+	Parameter IS_D4_INVERTED bound to: 1'b0 
+	Parameter IS_D5_INVERTED bound to: 1'b0 
+	Parameter IS_D6_INVERTED bound to: 1'b0 
+	Parameter IS_D7_INVERTED bound to: 1'b0 
+	Parameter IS_D8_INVERTED bound to: 1'b0 
+	Parameter IS_T1_INVERTED bound to: 1'b0 
+	Parameter IS_T2_INVERTED bound to: 1'b0 
+	Parameter IS_T3_INVERTED bound to: 1'b0 
+	Parameter IS_T4_INVERTED bound to: 1'b0 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2' (23#1) [/tools/Xilinx2/Vivado/2020.2/scripts/rt/data/unisim_comp.v:50398]
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE2__parameterized0' [/tools/Xilinx2/Vivado/2020.2/scripts/rt/data/unisim_comp.v:50398]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_OQ bound to: 1'b0 
+	Parameter INIT_TQ bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter IS_D3_INVERTED bound to: 1'b0 
+	Parameter IS_D4_INVERTED bound to: 1'b0 
+	Parameter IS_D5_INVERTED bound to: 1'b0 
+	Parameter IS_D6_INVERTED bound to: 1'b0 
+	Parameter IS_D7_INVERTED bound to: 1'b0 
+	Parameter IS_D8_INVERTED bound to: 1'b0 
+	Parameter IS_T1_INVERTED bound to: 1'b0 
+	Parameter IS_T2_INVERTED bound to: 1'b0 
+	Parameter IS_T3_INVERTED bound to: 1'b0 
+	Parameter IS_T4_INVERTED bound to: 1'b0 
+	Parameter SERDES_MODE bound to: SLAVE - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2__parameterized0' (23#1) [/tools/Xilinx2/Vivado/2020.2/scripts/rt/data/unisim_comp.v:50398]
+INFO: [Synth 8-6155] done synthesizing module 'serializer' (24#1) [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/serializer.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi' (25#1) [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/hdmi.sv:4]
+WARNING: [Synth 8-689] width (10) of port connection 'cx' does not match port width (11) of module 'hdmi' [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/hdmi_top.sv:51]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_top' (26#1) [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/hdmi_working/hdmi_top.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'segment_driver' [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/Project.srcs/sources_1/imports/vivado/segment_driver.sv:23]
+	Parameter DIGIT_ZERO bound to: 2'b00 
+	Parameter DIGIT_ONE bound to: 2'b01 
+	Parameter DIGIT_TWO bound to: 2'b10 
+	Parameter DIGIT_THREE bound to: 2'b11 
+INFO: [Synth 8-226] default block is never used [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/Project.srcs/sources_1/imports/vivado/segment_driver.sv:63]
+INFO: [Synth 8-6157] synthesizing module 'digit2segments' [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/Project.srcs/sources_1/imports/vivado/digit2segments.sv:23]
+INFO: [Synth 8-226] default block is never used [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/Project.srcs/sources_1/imports/vivado/digit2segments.sv:30]
+INFO: [Synth 8-6155] done synthesizing module 'digit2segments' (27#1) [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/Project.srcs/sources_1/imports/vivado/digit2segments.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'segment_driver' (28#1) [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/Project.srcs/sources_1/imports/vivado/segment_driver.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'top_demo' (29#1) [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/Project.srcs/sources_1/new/top_demo.sv:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2371.836 ; gain = 0.000 ; free physical = 98443 ; free virtual = 123238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2375.797 ; gain = 3.961 ; free physical = 98443 ; free virtual = 123237
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2375.797 ; gain = 3.961 ; free physical = 98443 ; free virtual = 123237
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2381.734 ; gain = 0.000 ; free physical = 98435 ; free virtual = 123230
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/Project.srcs/constrs_1/new/constr.xdc]
+WARNING: [Vivado 12-584] No ports matched 'hdmi_out_en'. [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/Project.srcs/constrs_1/new/constr.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/Project.srcs/constrs_1/new/constr.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/Project.srcs/constrs_1/new/constr.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/Project.srcs/constrs_1/new/constr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_demo_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_demo_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2526.516 ; gain = 0.000 ; free physical = 98318 ; free virtual = 123112
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2526.516 ; gain = 0.000 ; free physical = 98318 ; free virtual = 123112
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2526.516 ; gain = 154.680 ; free physical = 98421 ; free virtual = 123215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2526.516 ; gain = 154.680 ; free physical = 98421 ; free virtual = 123215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2526.516 ; gain = 154.680 ; free physical = 98421 ; free virtual = 123215
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'CURRENT_STATE_reg' in module 'segment_driver'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              DIGIT_ZERO |                               00 |                               00
+               DIGIT_ONE |                               01 |                               01
+               DIGIT_TWO |                               10 |                               10
+             DIGIT_THREE |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'CURRENT_STATE_reg' using encoding 'sequential' in module 'segment_driver'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2526.516 ; gain = 154.680 ; free physical = 98392 ; free virtual = 123188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   17 Bit       Adders := 2     
+	   2 Input   11 Bit       Adders := 2     
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 10    
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 8     
+	   4 Input    5 Bit       Adders := 6     
+	   3 Input    5 Bit       Adders := 6     
+	   8 Input    4 Bit       Adders := 42    
+	   5 Input    4 Bit       Adders := 24    
+	   3 Input    3 Bit       Adders := 4     
+	   2 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      8 Bit         XORs := 18    
+	   2 Input      1 Bit         XORs := 45    
++---XORs : 
+	               27 Bit    Wide XORs := 8     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               24 Bit    Registers := 25    
+	               17 Bit    Registers := 2     
+	               16 Bit    Registers := 2     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 4     
+	                8 Bit    Registers := 8     
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 4     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 18    
++---Muxes : 
+	   2 Input   64 Bit        Muxes := 1     
+	   2 Input   24 Bit        Muxes := 28    
+	   4 Input   24 Bit        Muxes := 2     
+	   2 Input   17 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 2     
+	   2 Input   11 Bit        Muxes := 2     
+	   4 Input   10 Bit        Muxes := 4     
+	   2 Input   10 Bit        Muxes := 9     
+	   5 Input   10 Bit        Muxes := 1     
+	  21 Input   10 Bit        Muxes := 2     
+	   2 Input    9 Bit        Muxes := 3     
+	   5 Input    8 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 80    
+	   3 Input    8 Bit        Muxes := 1     
+	 134 Input    8 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 9     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 4     
+	   5 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 8     
+	   5 Input    1 Bit        Muxes := 1     
+	   6 Input    1 Bit        Muxes := 2     
+	  10 Input    1 Bit        Muxes := 1     
+	 135 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2526.516 ; gain = 154.680 ; free physical = 98349 ; free virtual = 123160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2526.516 ; gain = 154.680 ; free physical = 98232 ; free virtual = 123042
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2526.516 ; gain = 154.680 ; free physical = 98231 ; free virtual = 123042
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 2526.516 ; gain = 154.680 ; free physical = 98237 ; free virtual = 123048
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2526.516 ; gain = 154.680 ; free physical = 98238 ; free virtual = 123048
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2526.516 ; gain = 154.680 ; free physical = 98238 ; free virtual = 123048
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2526.516 ; gain = 154.680 ; free physical = 98238 ; free virtual = 123048
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2526.516 ; gain = 154.680 ; free physical = 98238 ; free virtual = 123048
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2526.516 ; gain = 154.680 ; free physical = 98238 ; free virtual = 123048
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2526.516 ; gain = 154.680 ; free physical = 98238 ; free virtual = 123048
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     4|
+|2     |CARRY4     |    19|
+|3     |LUT1       |    16|
+|4     |LUT2       |   151|
+|5     |LUT3       |    83|
+|6     |LUT4       |   175|
+|7     |LUT5       |   134|
+|8     |LUT6       |   354|
+|9     |MMCME2_ADV |     1|
+|10    |MUXF7      |    13|
+|11    |MUXF8      |     1|
+|12    |OSERDESE2  |     8|
+|14    |FDRE       |   317|
+|15    |FDSE       |     5|
+|16    |IBUF       |    13|
+|17    |OBUF       |    12|
+|18    |OBUFDS     |     4|
+|19    |OBUFT      |     8|
++------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2526.516 ; gain = 154.680 ; free physical = 98238 ; free virtual = 123048
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 2526.516 ; gain = 3.961 ; free physical = 98291 ; free virtual = 123102
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2526.516 ; gain = 154.680 ; free physical = 98291 ; free virtual = 123102
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2526.516 ; gain = 0.000 ; free physical = 98379 ; free virtual = 123189
+INFO: [Netlist 29-17] Analyzing 38 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2545.430 ; gain = 0.000 ; free physical = 98328 ; free virtual = 123138
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+94 Infos, 2 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:35 . Memory (MB): peak = 2545.430 ; gain = 173.594 ; free physical = 98466 ; free virtual = 123277
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint '/home/rerra/Desktop/projnov10gitupdate/Project_under_construction/Project.runs/synth_1/top_demo.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_demo_utilization_synth.rpt -pb top_demo_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 11 14:43:40 2022...
