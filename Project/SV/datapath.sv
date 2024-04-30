@@ -70,7 +70,7 @@ module datapath ( grid, grid_evolve );
    evolve8 e6_4 (grid_evolve[52], grid[3+8*5], grid[4+8*5], grid[5+8*5], grid[11+8*5], grid[13+8*5], grid[19+8*5], grid[20+8*5], grid[21+8*5], grid[52]);
    evolve8 e6_5 (grid_evolve[53], grid[4+8*5], grid[5+8*5], grid[6+8*5], grid[12+8*5], grid[14+8*5], grid[20+8*5], grid[21+8*5], grid[22+8*5], grid[53]);
    evolve8 e6_6 (grid_evolve[54], grid[5+8*5], grid[6+8*5], grid[7+8*5], grid[13+8*5], grid[15+8*5], grid[21+8*5], grid[22+8*5], grid[23+8*5], grid[54]);
-   evolve5 e6_7 (grid_evolve[55], grid[6+8*5], grid[7+8*5], grid[14+8*5], grid[22+8*5], grid[23+8*5], grid[47]);
+   evolve5 e6_7 (grid_evolve[55], grid[6+8*5], grid[7+8*5], grid[14+8*5], grid[22+8*5], grid[23+8*5], grid[55]);
    
    evolve3 e7_0 (grid_evolve[56], grid[0+8*6], grid[1+8*6], grid[9+8*6], grid[56]);
    evolve5 e7_1 (grid_evolve[57], grid[0+8*6], grid[1+8*6], grid[2+8*6], grid[8+8*6], grid[10+8*6], grid[57]);
